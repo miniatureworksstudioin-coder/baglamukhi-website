@@ -2,92 +2,81 @@ import { useState } from 'react';
 import { pujas } from '../pujas';
 import { whatsappLink } from '../contact';
 
-const INITIAL_FORM = {
-  name: '',
-  phone: '',
-  puja: pujas[0].name,
-  date: '',
-  message: '',
-};
-
+const INITIAL_FORM = { name: '', phone: '', puja: pujas[0].name, date: '', message: '' };
 const fieldClass = 'mt-1.5 w-full rounded-lg border border-[#dfcfb6] bg-white px-4 py-3 text-ink outline-none transition focus:border-saffron focus:ring-2 focus:ring-saffron/40';
-const today = () => new Date().toLocaleDateString('en-CA');
 
 export default function BookingForm() {
   const [form, setForm] = useState(INITIAL_FORM);
-  const [error, setError] = useState('');
-
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setForm((current) => ({ ...current, [name]: value }));
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    setError('');
-
-    if (form.date && form.date < today()) {
-      setError('Please choose today or a future date.');
-      return;
-    }
-
-    const message = [
-      'Namaste Guruji,',
-      `Name: ${form.name.trim()}`,
-      `Phone: ${form.phone.trim()}`,
-      `Puja: ${form.puja}`,
-      `Date: ${form.date || 'Not decided'}`,
-      form.message.trim() ? `Message: ${form.message.trim()}` : null,
-    ]
-      .filter(Boolean)
-      .join('\n');
-
-    window.open(whatsappLink(message), '_blank', 'noopener,noreferrer');
+  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const msg = `Namaste Guruji,\nName: ${form.name}\nPhone: ${form.phone}\nPuja: ${form.puja}\nDate: ${form.date || 'Not decided'}\nMessage: ${form.message}`;
+    window.open(whatsappLink(msg), '_blank');
   };
 
   return (
-    <section id="contact" className="scroll-mt-24 bg-[#f3ead9] px-5 py-20">
-      <div className="mx-auto max-w-2xl">
-        <div className="text-center">
-          <h2 className="font-serif text-4xl font-semibold text-maroon sm:text-5xl">Book your puja</h2>
-          <p className="mt-3 text-lg text-ink/70">Send your details and Guruji will reply on WhatsApp with the date, samagri and dakshina.</p>
+    <section id="contact" className="py-24 px-5 bg-[#f1e9dc]">
+      <div className="mx-auto max-w-7xl grid md:grid-cols-[.8fr_1.2fr] gap-16 items-start">
+        <div>
+          <span className="text-[#9e7426] uppercase tracking-widest text-xs font-bold">Start with a conversation</span>
+          <h2 className="mt-3 font-serif text-6xl text-[#641e17] leading-none">Book your puja</h2>
+          <p className="mt-6 text-[#6c5b4f] text-lg">Send your details and Guruji will reply on WhatsApp with the date, samagri and dakshina.</p>
+          
+          <div className="mt-8 space-y-6">
+            <div className="flex gap-4">
+              <div className="bg-[#f3d790] text-[#6b2418] p-3 rounded-full border border-[#c5962e]">📞</div>
+              <div>
+                <strong className="block text-sm text-[#641e17]">Phone & WhatsApp</strong>
+                <a href="tel:+919174137815" className="text-[#6c5b4f]">+91 91741 37815</a>
+              </div>
+            </div>
+            <div className="flex gap-4">
+              <div className="bg-[#f3d790] text-[#6b2418] p-3 rounded-full border border-[#c5962e]">📍</div>
+              <div>
+                <strong className="block text-sm text-[#641e17]">Address</strong>
+                <span className="text-[#6c5b4f]">Baglamukhi Mandir, Nalkheda, Agar Malwa, Madhya Pradesh</span>
+              </div>
+            </div>
+            <div className="flex gap-4">
+              <div className="bg-[#f3d790] text-[#6b2418] p-3 rounded-full border border-[#c5962e]">🕒</div>
+              <div>
+                <strong className="block text-sm text-[#641e17]">Available</strong>
+                <span className="text-[#6c5b4f]">Every day, 6 am to 9 pm</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8 border border-dashed border-[#b1842c] p-4 bg-[#faf2df] rounded-lg">
+             <strong className="block text-lg font-serif text-[#5d2118]">Find the temple on Google Maps</strong>
+             <span className="text-sm text-[#766355]">Baglamukhi Mandir, Nalkheda, Agar Malwa, M.P. Tap to open directions.</span>
+          </div>
         </div>
 
-        <form onSubmit={handleSubmit} className="mt-10 grid gap-5 rounded-xl border border-[#e4d2af] bg-[#fffaf1] p-6 shadow-lg sm:p-8">
-          <label className="block font-semibold text-ink" htmlFor="booking-name">
-            Your name
-            <input id="booking-name" name="name" type="text" autoComplete="name" required value={form.name} onChange={handleChange} className={fieldClass} />
+        <form onSubmit={handleSubmit} className="bg-[#fffaf2] border border-[#e2d5c0] rounded-xl p-8 shadow-xl grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <h3 className="col-span-full font-serif text-3xl text-[#641e17]">Puja booking request</h3>
+          
+          <label className="block text-sm font-bold text-[#58352c]">Your name
+            <input name="name" required value={form.name} onChange={handleChange} className={fieldClass} />
           </label>
-
-          <label className="block font-semibold text-ink" htmlFor="booking-phone">
-            Phone number
-            <input id="booking-phone" name="phone" type="tel" autoComplete="tel" required value={form.phone} onChange={handleChange} className={fieldClass} />
+          <label className="block text-sm font-bold text-[#58352c]">Phone number
+            <input name="phone" type="tel" required value={form.phone} onChange={handleChange} className={fieldClass} />
           </label>
-
-          <label className="block font-semibold text-ink" htmlFor="booking-puja">
-            Puja type
-            <select id="booking-puja" name="puja" value={form.puja} onChange={handleChange} className={fieldClass}>
-              {pujas.map((puja) => (
-                <option key={puja.id} value={puja.name}>{puja.name}</option>
-              ))}
+          <label className="block text-sm font-bold text-[#58352c]">Puja type
+            <select name="puja" value={form.puja} onChange={handleChange} className={fieldClass}>
+              {pujas.map(p => <option key={p.id} value={p.name}>{p.name}</option>)}
             </select>
           </label>
-
-          <label className="block font-semibold text-ink" htmlFor="booking-date">
-            Preferred date
-            <input id="booking-date" name="date" type="date" min={today()} value={form.date} onChange={handleChange} className={fieldClass} />
+          <label className="block text-sm font-bold text-[#58352c]">Preferred date
+            <input name="date" type="date" value={form.date} onChange={handleChange} className={fieldClass} />
           </label>
-
-          <label className="block font-semibold text-ink" htmlFor="booking-message">
-            Message (optional)
-            <textarea id="booking-message" name="message" rows={4} value={form.message} onChange={handleChange} className={fieldClass} />
+          <label className="col-span-full block text-sm font-bold text-[#58352c]">Message (optional)
+            <textarea name="message" rows="3" value={form.message} onChange={handleChange} className={fieldClass} />
           </label>
-
-          {error && <p role="alert" className="text-sm font-semibold text-red-700">{error}</p>}
-
-          <button type="submit" className="inline-flex min-h-[49px] items-center justify-center rounded-full bg-leaf px-8 py-3 font-bold text-white transition hover:-translate-y-0.5 hover:brightness-90">
+          
+          <button type="submit" className="col-span-full mt-2 rounded-full bg-[#167b4a] px-8 py-3 font-bold text-white transition hover:bg-[#11643e]">
             Send on WhatsApp
           </button>
+          <p className="col-span-full text-xs text-center text-[#7b6c5f] mt-2">This form opens WhatsApp with your message. We do not store your details on this website.</p>
         </form>
       </div>
     </section>

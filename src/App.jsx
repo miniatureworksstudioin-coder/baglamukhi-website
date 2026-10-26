@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { LanguageProvider } from './LanguageContext';
+import NoticePopup from './components/NoticePopup'; // NEW IMPORT
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -19,6 +20,10 @@ export default function App() {
   return (
     <LanguageProvider>
       <div className="bg-[#fbf7ee] text-[#2e211b] font-sans antialiased relative">
+        
+        {/* NEW POPUP COMPONENT */}
+        <NoticePopup />
+
         <Header />
         <main>
           <Hero />

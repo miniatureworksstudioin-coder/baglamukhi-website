@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -12,15 +13,10 @@ import Footer from './components/Footer';
 import AdminPanel from './components/AdminPanel';
 
 export default function App() {
-  // Simple routing logic: check if the URL path is '/admin'
-  const isAdminPage = window.location.pathname === '/admin';
-
-  if (isAdminPage) {
-    return <AdminPanel />;
-  }
+  const [isAdminOpen, setIsAdminOpen] = useState(false);
 
   return (
-    <div className="bg-[#fbf7ee] text-[#2e211b] font-sans antialiased">
+    <div className="bg-[#fbf7ee] text-[#2e211b] font-sans antialiased relative">
       <Header />
       <main>
         <Hero />
@@ -33,7 +29,12 @@ export default function App() {
         <FAQ />
         <BookingForm />
       </main>
-      <Footer />
+      
+      {/* Pass the open function to the Footer */}
+      <Footer onAdminClick={() => setIsAdminOpen(true)} />
+
+      {/* The Admin Panel Modal */}
+      <AdminPanel isOpen={isAdminOpen} onClose={() => setIsAdminOpen(false)} />
     </div>
   );
 }

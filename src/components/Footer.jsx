@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl grid md:grid-cols-3 gap-12 border-b border-[#fff3d72e] pb-10">
         <div>
           <h2 className="text-2xl font-serif text-[#efc75d]">Shree Baglamukhi Nalkheda</h2>
-          <p className="mt-4 text-sm">Puja, havan and anushthan at the Maa Baglamukhi Mandir, Nalkheda, with Pandit Raghunandan.</p>
+          <p className="mt-4 text-sm">Puja, havan and anushthan at the Maa Baglamukhi Mandir, Nalkheda, with Pandit Raghunandan Sharma.</p>
         </div>
         <div>
           <h3 className="text-xl font-serif text-[#efc75d]">Quick links</h3>
@@ -19,7 +19,8 @@ export default function Footer() {
           <h3 className="text-xl font-serif text-[#efc75d]">Contact</h3>
           <ul className="mt-4 space-y-2 text-sm">
             <li><a href="tel:+919174137815" className="hover:text-[#f0c75c]">+91 91741 37815</a></li>
-            <li><a href="#" className="hover:text-[#f0c75c]">WhatsApp</a></li>
+            <li><a href="mailto:shreebaglamukhinalkheda@gmail.com" className="hover:text-[#f0c75c]">shreebaglamukhinalkheda@gmail.com</a></li>
+            <li><a href="https://wa.me/919174137815" target="_blank" rel="noreferrer" className="hover:text-[#f0c75c]">WhatsApp</a></li>
             <li>Nalkheda, Agar Malwa, M.P.</li>
           </ul>
         </div>

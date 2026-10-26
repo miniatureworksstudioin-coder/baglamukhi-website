@@ -1,0 +1,52 @@
+export const translations = {
+  en: {
+    nav_home: "Home",
+    nav_about: "About Guruji",
+    nav_puja: "Puja Sequence",
+    nav_temple: "Temple",
+    nav_gallery: "Gallery",
+    nav_reviews: "Reviews",
+    nav_contact: "Contact",
+    btn_book: "Book Puja",
+    
+    hero_kicker: "॥ Jai Maa Baglamukhi ॥",
+    hero_title_1: "Baglamukhi Puja,",
+    hero_title_2: "Anushthan & Havan",
+    hero_title_3: "at Nalkheda",
+    hero_desc: "Perform Baglamukhi Pujan, Anushthan and Havan in the sacred temple town of Nalkheda, guided by Pandit Raghunandan Sharma. Visit in person, or book the puja and join from home.",
+    hero_btn_book: "Book a Puja",
+    hero_btn_wa: "WhatsApp Guruji",
+    hero_btn_call: "Call Now",
+    
+    about_kicker: "At Nalkheda · Madhya Pradesh",
+    about_title: "Pandit Raghunandan Sharma",
+    about_p1: "Pandit Raghunandan Sharma performs Baglamukhi Pujan, Anushthan, Havan and Durga Saptashati Chandi Path at the Nalkheda temple. Each puja follows Vedic vidhi, with the sankalp taken in your name and gotra.",
+    about_p2: "Before the puja he tells you the samagri needed, the muhurat and the number of pandits required, so that you know what to expect and what it costs.",
+    about_btn: "Speak to Guruji",
+  },
+  hi: {
+    nav_home: "मुख्य पृष्ठ",
+    nav_about: "गुरुजी के बारे में",
+    nav_puja: "पूजा क्रम",
+    nav_temple: "मंदिर",
+    nav_gallery: "गैलरी",
+    nav_reviews: "समीक्षाएँ",
+    nav_contact: "संपर्क",
+    btn_book: "पूजा बुक करें",
+    
+    hero_kicker: "॥ जय माँ बगलामुखी ॥",
+    hero_title_1: "बगलामुखी पूजा,",
+    hero_title_2: "अनुष्ठान और हवन",
+    hero_title_3: "नलखेड़ा में",
+    hero_desc: "नलखेड़ा के पावन मंदिर में पंडित रघुनंदन शर्मा के मार्गदर्शन में बगलामुखी पूजन, अनुष्ठान और हवन कराएँ। स्वयं पधारें या घर बैठे जुड़ें।",
+    hero_btn_book: "पूजा बुक करें",
+    hero_btn_wa: "गुरुजी को व्हाट्सऐप करें",
+    hero_btn_call: "अभी कॉल करें",
+    
+    about_kicker: "नलखेड़ा में · मध्य प्रदेश",
+    about_title: "पंडित रघुनंदन शर्मा",
+    about_p1: "पंडित रघुनंदन शर्मा नलखेड़ा मंदिर में बगलामुखी पूजन, अनुष्ठान, हवन और दुर्गा सप्तशती चंडी पाठ संपन्न करते हैं। प्रत्येक पूजा वैदिक विधि से होती है और संकल्प आपके नाम व गोत्र से लिया जाता है।",
+    about_p2: "पूजा से पहले वे आवश्यक सामग्री, मुहूर्त और पंडितों की संख्या बताते हैं, ताकि आपको प्रक्रिया और दक्षिणा की जानकारी रहे।",
+    about_btn: "गुरुजी से बात करें",
+  }
+};

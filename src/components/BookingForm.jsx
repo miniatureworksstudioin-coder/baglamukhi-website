@@ -32,7 +32,7 @@ export default function BookingForm() {
     }
 
     setSuccess(true);
-    const msg = `Namaste Guruji,\nName: ${form.name}\nPhone: ${form.phone}\nPuja: ${form.puja}\nDate: ${form.date || 'Not decided'}\nMessage: ${form.message}`;
+    const msg = `Jay mai ki guru ji,\nName: ${form.name}\nPhone: ${form.phone}\nPuja: ${form.puja}\nDate: ${form.date || 'Not decided'}\nMessage: ${form.message}`;
     window.open(whatsappLink(msg), '_blank');
     
     setForm(INITIAL_FORM);

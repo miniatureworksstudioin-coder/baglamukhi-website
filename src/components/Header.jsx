@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ADDRESS, PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL } from '../contact';
+import { ADDRESS, PHONE_DISPLAY, PHONE_TEL, PHONE2_DISPLAY, PHONE2_TEL, WHATSAPP_URL } from '../contact';
 
 const NAV_LINKS = [
   { label: 'Home', href: '#top' },
@@ -16,17 +16,19 @@ export default function Header() {
 
   return (
     <>
-      {/* Top Bar - Cleaned up for Mobile */}
+      {/* Top Bar */}
       <div className="bg-[#2c0d09] text-[#f0dfbd] text-[12px] sm:text-[13px] font-medium">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-2 px-4 py-2.5 sm:flex-row sm:justify-between sm:px-5 sm:py-2">
           
-          {/* Address (Hidden on very small screens to save space) */}
           <p className="hidden md:block">{ADDRESS}</p>
           
-          {/* Contact Links (Flex-wrap prevents squishing) */}
           <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 sm:gap-4">
             <a href={`tel:${PHONE_TEL}`} className="hover:text-[#f3c758] whitespace-nowrap">
               Call: {PHONE_DISPLAY}
+            </a>
+            <span className="text-white/30">|</span>
+            <a href={`tel:${PHONE2_TEL}`} className="hover:text-[#f3c758] whitespace-nowrap">
+              Call: {PHONE2_DISPLAY}
             </a>
             
             <span className="hidden sm:inline text-white/30">|</span>
@@ -34,10 +36,6 @@ export default function Header() {
             <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="hover:text-[#f3c758] whitespace-nowrap">
               WhatsApp
             </a>
-            
-            <span className="hidden sm:inline text-white/30">|</span>
-            
-            <span className="whitespace-nowrap">Open daily, 6 am to 9 pm</span>
             
             <span className="hidden sm:inline text-white/30">|</span>
             
@@ -52,18 +50,19 @@ export default function Header() {
       <header className="sticky top-0 z-50 border-b border-[#e5d8c5] bg-[#fbf7ee]/90 backdrop-blur-lg">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-5">
           
-          {/* Brand (Slightly smaller on mobile) */}
+          {/* Brand (UPDATED STYLING HERE) */}
           <a href="#top" className="flex items-center gap-2.5 sm:gap-3">
             <span className="grid h-10 w-10 sm:h-11 sm:w-11 shrink-0 place-items-center rounded-full bg-[#f0c25a] font-hindi text-xl sm:text-2xl text-[#4b160f] shadow-[0_0_0_4px_#fbf7ee,0_0_0_5px_#d3a846]">
               ॐ
             </span>
-            <span className="leading-tight">
-              <strong className="block font-serif text-[1.1rem] sm:text-xl font-bold text-[#641e17] leading-tight">
+            <span className="leading-tight flex flex-col justify-center">
+              <strong className="block font-serif text-[1.1rem] sm:text-[1.3rem] font-bold text-[#641e17] leading-tight">
                 Shree Baglamukhi Nalkheda
               </strong>
-              <small className="text-[11px] sm:text-xs text-[#77675b] block mt-0.5">
+              {/* NEW STYLISH NAME */}
+              <span className="text-[15px] sm:text-[17px] font-serif italic text-[#9e7426] block mt-0.5 tracking-wide">
                 Pandit Raghunandan Sharma
-              </small>
+              </span>
             </span>
           </a>
 
@@ -104,11 +103,6 @@ export default function Header() {
                 </li>
               ))}
             </ul>
-            <div className="mt-4 pt-4 border-t border-[#e5d8c5] flex flex-col gap-3">
-              <a href="#contact" onClick={() => setMenuOpen(false)} className="flex justify-center rounded-full bg-[#efbd48] px-5 py-3 font-bold text-[#35100c]">
-                Book Puja
-              </a>
-            </div>
           </nav>
         )}
       </header>

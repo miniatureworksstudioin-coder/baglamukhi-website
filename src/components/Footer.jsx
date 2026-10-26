@@ -1,4 +1,4 @@
-export default function Footer() {
+export default function Footer({ onAdminClick }) {
   return (
     <footer className="bg-[#2b0c08] text-[#d8c7a6] py-14 px-5">
       <div className="mx-auto max-w-7xl grid md:grid-cols-3 gap-12 border-b border-[#fff3d72e] pb-10">
@@ -25,9 +25,14 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div className="mx-auto max-w-7xl mt-6 text-xs flex flex-col gap-2">
+      
+      {/* Bottom Bar with Admin Link */}
+      <div className="mx-auto max-w-7xl mt-6 text-xs flex flex-col md:flex-row justify-between items-center gap-4 text-[#b8a786]">
         <p>© 2026 Shree Baglamukhi Nalkheda. All rights reserved.</p>
-        <p>Beware of third-party apps or brokers using our name. Please book only through the phone number above. Services follow tradition and faith, and no specific result is promised.</p>
+        <p className="text-center md:text-left flex-1">Beware of third-party apps or brokers using our name.</p>
+        <button onClick={onAdminClick} className="hover:text-[#f0c75c] underline decoration-[#f0c75c]/30 underline-offset-4 transition-colors">
+          Admin Sign-in
+        </button>
       </div>
     </footer>
   );

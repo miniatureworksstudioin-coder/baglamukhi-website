@@ -57,15 +57,26 @@ export default function AdminPanel({ isOpen, onClose }) {
     }
   };
 
-  // NEW FUNCTION TO DELETE BOOKING
-  const handleDeleteBooking = async (id) => {
-    if (!window.confirm("Are you sure you want to permanently delete this booking?")) return;
+  // NEW FUNCTION TO DELETE A REVIEW
+  const handleDeleteReview = async (id) => {
+    if (!window.confirm("Are you sure you want to permanently delete this review?")) return;
 
-    const { error } = await supabase.from('bookings').delete().eq('id', id);
+    const { error } = await supabase.from('reviews').delete().eq('id', id);
 
     if (!error) {
-      alert("Booking deleted successfully.");
+      alert("Review deleted successfully.");
       fetchData(); // Refresh the list
+    } else {
+      alert("Error deleting review. Please try again.");
+    }
+  };
+
+  const handleDeleteBooking = async (id) => {
+    if (!window.confirm("Are you sure you want to permanently delete this booking?")) return;
+    const { error } = await supabase.from('bookings').delete().eq('id', id);
+    if (!error) {
+      alert("Booking deleted successfully.");
+      fetchData();
     } else {
       alert("Error deleting booking. Please try again.");
     }
@@ -106,14 +117,26 @@ export default function AdminPanel({ isOpen, onClose }) {
               <div className="space-y-4">
                 {reviews.length === 0 ? <p className="text-center py-10">No reviews yet.</p> : reviews.map((review) => (
                   <div key={review.id} className="bg-[#fffaf0] p-5 rounded-lg border border-[#ead9b2]">
+                    
+                    {/* Review Header with Delete Button */}
                     <div className="flex justify-between items-start mb-2">
                       <div>
                         <strong className="text-lg text-[#641e17]">{review.name}</strong> <span className="text-sm text-gray-600">({review.city || 'No City'})</span>
                         <div className="text-[#e8ad2e] text-sm">{'★'.repeat(review.rating)}</div>
                       </div>
-                      <span className="text-xs text-gray-400">{new Date(review.created_at).toLocaleDateString()}</span>
+                      <div className="flex flex-col items-end gap-2">
+                        <span className="text-xs text-gray-400">{new Date(review.created_at).toLocaleDateString()}</span>
+                        <button 
+                          onClick={() => handleDeleteReview(review.id)}
+                          className="text-xs font-bold text-red-600 hover:text-red-800 flex items-center gap-1 bg-red-50 px-2 py-1 rounded"
+                        >
+                          🗑️ Delete
+                        </button>
+                      </div>
                     </div>
+
                     <p className="italic text-[#57463c] mb-3 text-sm">"{review.review_text}"</p>
+                    
                     {review.admin_reply ? (
                       <div className="bg-[#f2e8d5] border-l-4 border-[#641e17] p-3 text-sm text-[#57463c]">
                         <strong className="block mb-1 text-xs">Your Reply:</strong>{review.admin_reply}
@@ -143,23 +166,16 @@ export default function AdminPanel({ isOpen, onClose }) {
                       </div>
                     </div>
                     
-                    {/* Actions Column */}
                     <div className="flex flex-col gap-2 md:items-end justify-center border-t md:border-t-0 md:border-l border-[#ead9b2] pt-3 md:pt-0 md:pl-4">
                       <a href={`tel:${booking.phone}`} className="text-sm font-bold text-[#167b4a] hover:underline flex items-center gap-1">📞 Call: {booking.phone}</a>
                       <a href={`https://wa.me/${booking.phone.replace(/\D/g,'')}`} target="_blank" rel="noreferrer" className="text-sm font-bold text-[#167b4a] hover:underline flex items-center gap-1">💬 WhatsApp</a>
                       
                       <div className="flex items-center justify-between md:justify-end gap-3 mt-2">
                         <span className="text-[11px] text-gray-400">Booked: {new Date(booking.created_at).toLocaleDateString()}</span>
-                        
-                        {/* DELETE BUTTON */}
-                        <button 
-                          onClick={() => handleDeleteBooking(booking.id)}
-                          className="text-xs font-bold text-red-600 hover:text-red-800 flex items-center gap-1 bg-red-50 px-2 py-1 rounded"
-                        >
+                        <button onClick={() => handleDeleteBooking(booking.id)} className="text-xs font-bold text-red-600 hover:text-red-800 flex items-center gap-1 bg-red-50 px-2 py-1 rounded">
                           🗑️ Delete
                         </button>
                       </div>
-
                     </div>
                   </div>
                 ))}

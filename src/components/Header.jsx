@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ADDRESS, PHONE_DISPLAY, PHONE_TEL } from '../contact'; // Fixed path
+import { ADDRESS, PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL } from '../contact';
 
 const NAV_LINKS = [
   { label: 'Home', href: '#top' },
@@ -16,38 +16,58 @@ export default function Header() {
 
   return (
     <>
-      {/* Top bar - Deep brown */}
-      <div className="bg-[#2c0d09] text-[#f0dfbd] text-[13px]">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-1 px-5 py-2 sm:flex-row">
-          <p>Baglamukhi Mandir, Nalkheda, Agar Malwa (M.P.)</p>
-          <div className="flex items-center gap-4">
-            <a href={`tel:${PHONE_TEL}`} className="hover:text-[#f3c758]">Call: {PHONE_DISPLAY}</a>
-            <span>|</span>
-            <a href="#" className="hover:text-[#f3c758]">WhatsApp</a>
-            <span>|</span>
-            <span>Open daily, 6 am to 9 pm</span>
-            <span>|</span>
-            <a href="https://mabaglamukhi.org" target="_blank" rel="noreferrer" className="text-[#f3c758]">Live Darshan ↗</a>
+      {/* Top Bar - Cleaned up for Mobile */}
+      <div className="bg-[#2c0d09] text-[#f0dfbd] text-[12px] sm:text-[13px] font-medium">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-2 px-4 py-2.5 sm:flex-row sm:justify-between sm:px-5 sm:py-2">
+          
+          {/* Address (Hidden on very small screens to save space) */}
+          <p className="hidden md:block">{ADDRESS}</p>
+          
+          {/* Contact Links (Flex-wrap prevents squishing) */}
+          <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 sm:gap-4">
+            <a href={`tel:${PHONE_TEL}`} className="hover:text-[#f3c758] whitespace-nowrap">
+              Call: {PHONE_DISPLAY}
+            </a>
+            
+            <span className="hidden sm:inline text-white/30">|</span>
+            
+            <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="hover:text-[#f3c758] whitespace-nowrap">
+              WhatsApp
+            </a>
+            
+            <span className="hidden sm:inline text-white/30">|</span>
+            
+            <span className="whitespace-nowrap">Open daily, 6 am to 9 pm</span>
+            
+            <span className="hidden sm:inline text-white/30">|</span>
+            
+            <a href="https://mabaglamukhi.org" target="_blank" rel="noreferrer" className="text-[#f3c758] whitespace-nowrap flex items-center gap-1 hover:text-[#f7cb66]">
+              Live Darshan ↗
+            </a>
           </div>
         </div>
       </div>
 
-      {/* Main sticky header */}
+      {/* Main Header */}
       <header className="sticky top-0 z-50 border-b border-[#e5d8c5] bg-[#fbf7ee]/90 backdrop-blur-lg">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-5">
           
-          {/* Brand */}
-          <a href="#top" className="flex items-center gap-3">
-            <span className="grid h-11 w-11 place-items-center rounded-full bg-[#f0c25a] font-hindi text-2xl text-[#4b160f] shadow-[0_0_0_4px_#fbf7ee,0_0_0_5px_#d3a846]">
+          {/* Brand (Slightly smaller on mobile) */}
+          <a href="#top" className="flex items-center gap-2.5 sm:gap-3">
+            <span className="grid h-10 w-10 sm:h-11 sm:w-11 shrink-0 place-items-center rounded-full bg-[#f0c25a] font-hindi text-xl sm:text-2xl text-[#4b160f] shadow-[0_0_0_4px_#fbf7ee,0_0_0_5px_#d3a846]">
               ॐ
             </span>
             <span className="leading-tight">
-              <strong className="block font-serif text-xl font-bold text-[#641e17]">Shree Baglamukhi Nalkheda</strong>
-              <small className="text-xs text-[#77675b]">Pandit Raghunandan Sharma</small>
+              <strong className="block font-serif text-[1.1rem] sm:text-xl font-bold text-[#641e17] leading-tight">
+                Shree Baglamukhi Nalkheda
+              </strong>
+              <small className="text-[11px] sm:text-xs text-[#77675b] block mt-0.5">
+                Pandit Raghunandan Sharma
+              </small>
             </span>
           </a>
 
-          {/* Desktop Nav */}
+          {/* Desktop Navigation */}
           <nav className="hidden items-center gap-1 lg:flex">
             {NAV_LINKS.map((link) => (
               <a key={link.href} href={link.href} className="rounded-md px-3 py-2 text-[15px] font-semibold text-[#46342d] transition-colors hover:bg-[#f2e8d5] hover:text-[#641e17]">
@@ -57,7 +77,7 @@ export default function Header() {
           </nav>
 
           {/* Actions */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
             <button className="hidden rounded-full border border-[#baa780] px-3 py-1.5 text-sm font-bold text-[#641e17] sm:block hover:bg-[#f4e8cb]">
               हिन्दी
             </button>
@@ -66,15 +86,15 @@ export default function Header() {
             </a>
 
             {/* Mobile menu button */}
-            <button onClick={() => setMenuOpen(!menuOpen)} className="grid h-11 w-11 place-items-center rounded-full border border-[#baa780] text-[#641e17] lg:hidden">
+            <button onClick={() => setMenuOpen(!menuOpen)} className="grid h-10 w-10 place-items-center rounded-full border border-[#baa780] text-[#641e17] lg:hidden bg-white/50">
               {menuOpen ? '✕' : '☰'}
             </button>
           </div>
         </div>
 
-        {/* Mobile Nav */}
+        {/* Mobile Navigation */}
         {menuOpen && (
-          <nav className="border-t border-[#e5d8c5] bg-[#fbf7ee] px-5 py-4 lg:hidden">
+          <nav className="border-t border-[#e5d8c5] bg-[#fbf7ee] px-5 py-4 lg:hidden shadow-lg absolute w-full">
             <ul className="flex flex-col gap-1">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
@@ -84,6 +104,11 @@ export default function Header() {
                 </li>
               ))}
             </ul>
+            <div className="mt-4 pt-4 border-t border-[#e5d8c5] flex flex-col gap-3">
+              <a href="#contact" onClick={() => setMenuOpen(false)} className="flex justify-center rounded-full bg-[#efbd48] px-5 py-3 font-bold text-[#35100c]">
+                Book Puja
+              </a>
+            </div>
           </nav>
         )}
       </header>

@@ -50,7 +50,7 @@ export default function Header() {
       <header className="sticky top-0 z-50 border-b border-[#e5d8c5] bg-[#fbf7ee]/90 backdrop-blur-lg">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-5">
           
-          {/* Brand (UPDATED STYLING HERE) */}
+          {/* Brand */}
           <a href="#top" className="flex items-center gap-2.5 sm:gap-3">
             <span className="grid h-10 w-10 sm:h-11 sm:w-11 shrink-0 place-items-center rounded-full bg-[#f0c25a] font-hindi text-xl sm:text-2xl text-[#4b160f] shadow-[0_0_0_4px_#fbf7ee,0_0_0_5px_#d3a846]">
               ॐ
@@ -59,8 +59,8 @@ export default function Header() {
               <strong className="block font-serif text-[1.1rem] sm:text-[1.3rem] font-bold text-[#641e17] leading-tight">
                 Shree Baglamukhi Nalkheda
               </strong>
-              {/* NEW STYLISH NAME */}
-              <span className="text-[15px] sm:text-[17px] font-serif italic text-[#9e7426] block mt-0.5 tracking-wide">
+              {/* UPDATED TO DARK BROWN HERE */}
+              <span className="text-[15px] sm:text-[17px] font-serif italic text-[#35100c] block mt-0.5 tracking-wide">
                 Pandit Raghunandan Sharma
               </span>
             </span>

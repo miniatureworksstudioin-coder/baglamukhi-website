@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { LanguageProvider } from './LanguageContext';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -16,25 +17,23 @@ export default function App() {
   const [isAdminOpen, setIsAdminOpen] = useState(false);
 
   return (
-    <div className="bg-[#fbf7ee] text-[#2e211b] font-sans antialiased relative">
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <PujaList />
-        <Process />
-        <Temple />
-        <Gallery />
-        <Reviews />
-        <FAQ />
-        <BookingForm />
-      </main>
-      
-      {/* Pass the open function to the Footer */}
-      <Footer onAdminClick={() => setIsAdminOpen(true)} />
-
-      {/* The Admin Panel Modal */}
-      <AdminPanel isOpen={isAdminOpen} onClose={() => setIsAdminOpen(false)} />
-    </div>
+    <LanguageProvider>
+      <div className="bg-[#fbf7ee] text-[#2e211b] font-sans antialiased relative">
+        <Header />
+        <main>
+          <Hero />
+          <About />
+          <PujaList />
+          <Process />
+          <Temple />
+          <Gallery />
+          <Reviews />
+          <FAQ />
+          <BookingForm />
+        </main>
+        <Footer onAdminClick={() => setIsAdminOpen(true)} />
+        <AdminPanel isOpen={isAdminOpen} onClose={() => setIsAdminOpen(false)} />
+      </div>
+    </LanguageProvider>
   );
 }

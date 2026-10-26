@@ -1,3 +1,5 @@
+import { PHONE_DISPLAY, PHONE_TEL, PHONE2_DISPLAY, PHONE2_TEL } from '../contact';
+
 export default function Footer({ onAdminClick }) {
   return (
     <footer className="bg-[#2b0c08] text-[#d8c7a6] py-14 px-5">
@@ -18,7 +20,8 @@ export default function Footer({ onAdminClick }) {
         <div>
           <h3 className="text-xl font-serif text-[#efc75d]">Contact</h3>
           <ul className="mt-4 space-y-2 text-sm">
-            <li><a href="tel:+919174137815" className="hover:text-[#f0c75c]">+91 91741 37815</a></li>
+            <li><a href={`tel:${PHONE_TEL}`} className="hover:text-[#f0c75c]">{PHONE_DISPLAY}</a></li>
+            <li><a href={`tel:${PHONE2_TEL}`} className="hover:text-[#f0c75c]">{PHONE2_DISPLAY}</a></li>
             <li><a href="mailto:shreebaglamukhinalkheda@gmail.com" className="hover:text-[#f0c75c]">shreebaglamukhinalkheda@gmail.com</a></li>
             <li><a href="https://wa.me/919174137815" target="_blank" rel="noreferrer" className="hover:text-[#f0c75c]">WhatsApp</a></li>
             <li>Nalkheda, Agar Malwa, M.P.</li>
@@ -26,7 +29,6 @@ export default function Footer({ onAdminClick }) {
         </div>
       </div>
       
-      {/* Bottom Bar with Admin Link */}
       <div className="mx-auto max-w-7xl mt-6 text-xs flex flex-col md:flex-row justify-between items-center gap-4 text-[#b8a786]">
         <p>© 2026 Shree Baglamukhi Nalkheda. All rights reserved.</p>
         <p className="text-center md:text-left flex-1">Beware of third-party apps or brokers using our name.</p>

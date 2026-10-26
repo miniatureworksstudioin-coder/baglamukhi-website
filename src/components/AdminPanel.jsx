@@ -28,11 +28,9 @@ export default function AdminPanel({ isOpen, onClose }) {
   }, [isOpen]);
 
   const fetchData = async () => {
-    // Fetch Reviews
     const { data: reviewData } = await supabase.from('reviews').select('*').order('created_at', { ascending: false });
     if (reviewData) setReviews(reviewData);
 
-    // Fetch Bookings
     const { data: bookingData } = await supabase.from('bookings').select('*').order('created_at', { ascending: false });
     if (bookingData) setBookings(bookingData);
   };
@@ -50,14 +48,26 @@ export default function AdminPanel({ isOpen, onClose }) {
   const handleReplySubmit = async (id) => {
     const text = replyText[id];
     if (!text) return;
-
     const { error } = await supabase.from('reviews').update({ admin_reply: text }).eq('id', id);
-
     if (!error) {
       alert("Reply saved successfully!");
       fetchData();
     } else {
       alert("Error saving reply.");
+    }
+  };
+
+  // NEW FUNCTION TO DELETE BOOKING
+  const handleDeleteBooking = async (id) => {
+    if (!window.confirm("Are you sure you want to permanently delete this booking?")) return;
+
+    const { error } = await supabase.from('bookings').delete().eq('id', id);
+
+    if (!error) {
+      alert("Booking deleted successfully.");
+      fetchData(); // Refresh the list
+    } else {
+      alert("Error deleting booking. Please try again.");
     }
   };
 
@@ -132,10 +142,24 @@ export default function AdminPanel({ isOpen, onClose }) {
                         {booking.message && <p className="italic text-gray-600">"{booking.message}"</p>}
                       </div>
                     </div>
-                    <div className="flex flex-col gap-2 md:items-end justify-center">
+                    
+                    {/* Actions Column */}
+                    <div className="flex flex-col gap-2 md:items-end justify-center border-t md:border-t-0 md:border-l border-[#ead9b2] pt-3 md:pt-0 md:pl-4">
                       <a href={`tel:${booking.phone}`} className="text-sm font-bold text-[#167b4a] hover:underline flex items-center gap-1">📞 Call: {booking.phone}</a>
                       <a href={`https://wa.me/${booking.phone.replace(/\D/g,'')}`} target="_blank" rel="noreferrer" className="text-sm font-bold text-[#167b4a] hover:underline flex items-center gap-1">💬 WhatsApp</a>
-                      <span className="text-xs text-gray-400">Booked: {new Date(booking.created_at).toLocaleDateString()}</span>
+                      
+                      <div className="flex items-center justify-between md:justify-end gap-3 mt-2">
+                        <span className="text-[11px] text-gray-400">Booked: {new Date(booking.created_at).toLocaleDateString()}</span>
+                        
+                        {/* DELETE BUTTON */}
+                        <button 
+                          onClick={() => handleDeleteBooking(booking.id)}
+                          className="text-xs font-bold text-red-600 hover:text-red-800 flex items-center gap-1 bg-red-50 px-2 py-1 rounded"
+                        >
+                          🗑️ Delete
+                        </button>
+                      </div>
+
                     </div>
                   </div>
                 ))}

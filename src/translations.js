@@ -1,6 +1,5 @@
 export const translations = {
   en: {
-    // Header
     nav_home: "Home",
     nav_about: "About Guruji",
     nav_puja: "Puja Sequence",
@@ -10,7 +9,6 @@ export const translations = {
     nav_contact: "Contact",
     btn_book: "Book Puja",
 
-    // Hero
     hero_kicker: "॥ Jai Maa Baglamukhi ॥",
     hero_title_1: "Baglamukhi Puja,",
     hero_title_2: "Anushthan & Havan",
@@ -27,15 +25,14 @@ export const translations = {
     hero_strip_3_sub: "Temple darshan, daily",
     hero_strip_4_sub: "Call or WhatsApp Guruji",
 
-    // About
     about_kicker: "At Nalkheda · Madhya Pradesh",
     about_title: "Pandit Raghunandan Sharma",
-    about_p1: "Pandit Raghunandan Sharma performs Baglamukhi Pujan, Anushthan, Havan and Durga Saptashati Chandi Path at the Nalkheda temple. Each puja follows Vedic vidhi, with the sankalp taken in your name and gotra.",
+    // UPDATED WITH 20 YEARS EXPERIENCE
+    about_p1: "Pandit Raghunandan Sharma, with over 20 years of experience, performs Baglamukhi Pujan, Anushthan, Havan and Durga Saptashati Chandi Path at the Nalkheda temple. Each puja follows Vedic vidhi, with the sankalp taken in your name and gotra.",
     about_p2: "Before the puja he tells you the samagri needed, the muhurat and the number of pandits required, so that you know what to expect and what it costs.",
     about_lang: "Languages spoken",
     about_btn: "Speak to Guruji",
 
-    // PujaList Headers
     puja_kicker: "In the order of the ceremony",
     puja_title: "Puja Sequence",
     puja_desc: "The ceremony follows this order, from sankalp to the final Chandi path. Dakshina depends on the puja chosen and the number of pandits. Guruji confirms it before you book.",
@@ -43,7 +40,24 @@ export const translations = {
     puja_btn_wa: "Ask on WhatsApp",
     puja_step: "STEP",
 
-    // Process
+    // NEW TRANSLATIONS FOR ABOUT PUJA
+    about_puja_kicker: "The Divine Grace of Maa Baglamukhi",
+    about_puja_title: "Puja & Benefits",
+    about_puja_desc: "Discover the spiritual significance and life-changing benefits of performing this sacred ritual at the Siddha Peeth of Nalkheda.",
+    about_puja_p1: "Maa Baglamukhi, the eighth of the ten Mahavidyas, is revered as the Goddess of Victory and Protection. Known as Pitambara (the one who loves yellow), her worship is considered one of the most powerful spiritual practices for overcoming obstacles, defeating negative forces, and attaining success in life.",
+    about_puja_benefits_title: "Key Benefits of the Puja",
+    about_puja_b1: "Victory in Legal Matters:",
+    about_puja_b1_desc: "Divine intervention in court cases, helping devotees overcome false allegations and achieve justice.",
+    about_puja_b2: "Protection from Negativity:",
+    about_puja_b2_desc: "Creates a powerful spiritual shield (Raksha Kavach) against hidden enemies, black magic, and the evil eye.",
+    about_puja_b3: "Success in Career & Business:",
+    about_puja_b3_desc: "Removes professional obstacles and helps devotees win competitions and achieve leadership positions.",
+    about_puja_b4: "Mental Peace & Clarity:",
+    about_puja_b4_desc: "Calms the mind, reduces stress, and removes fear and confusion for better decision-making.",
+    about_puja_b5: "Harmony & Prosperity:",
+    about_puja_b5_desc: "Brings stability, wealth, and peace to the family and home.",
+    about_puja_p2: "The Maa Baglamukhi Mandir in Nalkheda holds a unique place in Hindu mythology. It is believed that during the Mahabharata era, Yudhishthira performed a special puja here with yellow offerings to seek victory, and the Pandavas were blessed with success. Because the idol at Nalkheda is Swayambhu (self-manifested) and the temple is considered a Siddha Peeth, rituals performed here are believed to be especially powerful.",
+
     process_kicker: "Simple, personal, by phone",
     process_title: "How booking works",
     process_desc: "Four simple steps, all by phone or WhatsApp.",
@@ -56,7 +70,6 @@ export const translations = {
     process_4_t: "Prasad & blessings",
     process_4_d: "Join in person or by video call. Prasad can be sent to your address.",
 
-    // Temple
     temple_kicker: "A place of worship in Agar Malwa",
     temple_title: "Maa Baglamukhi Mandir, Nalkheda",
     temple_p1: "The temple stands on the bank of the Lakhundar river in Nalkheda, in the Agar Malwa district of Madhya Pradesh. It is counted among the three ancient Baglamukhi shrines of India, along with Datia and Kangra.",
@@ -67,11 +80,9 @@ export const translations = {
     temple_time_4: "Temple closes",
     temple_caption: "Worship at Maa Baglamukhi Mandir, Nalkheda",
 
-    // Gallery
     gallery_kicker: "Moments of worship",
     gallery_title: "Photo Gallery",
 
-    // Reviews
     reviews_kicker: "Words of Devotion",
     reviews_title: "What devotees say",
     reviews_desc: "Read experiences from other devotees. If you have booked a puja with us, we would be grateful if you shared your thoughts.",
@@ -86,11 +97,9 @@ export const translations = {
     reviews_form_submitting: "Submitting...",
     reviews_empty: "No reviews yet. Be the first to share your experience!",
 
-    // FAQ
     faq_kicker: "Before you book",
     faq_title: "Common questions",
 
-    // Booking Form
     form_kicker: "Start with a conversation",
     form_title: "Book your puja",
     form_desc: "Send your details and Guruji will reply on WhatsApp with the date, samagri and dakshina.",
@@ -110,7 +119,6 @@ export const translations = {
     form_btn_loading: "Saving...",
     form_note: "This form opens WhatsApp with your message. We do not store your details on this website.",
 
-    // Footer
     footer_desc: "Puja, havan and anushthan at the Maa Baglamukhi Mandir, Nalkheda, with Pandit Raghunandan Sharma.",
     footer_links: "Quick links",
     footer_contact: "Contact",
@@ -119,7 +127,6 @@ export const translations = {
     footer_admin: "Admin Sign-in"
   },
   hi: {
-    // Header
     nav_home: "मुख्य पृष्ठ",
     nav_about: "गुरुजी के बारे में",
     nav_puja: "पूजा क्रम",
@@ -129,7 +136,6 @@ export const translations = {
     nav_contact: "संपर्क",
     btn_book: "पूजा बुक करें",
 
-    // Hero
     hero_kicker: "॥ जय माँ बगलामुखी ॥",
     hero_title_1: "बगलामुखी पूजा,",
     hero_title_2: "अनुष्ठान और हवन",
@@ -146,15 +152,14 @@ export const translations = {
     hero_strip_3_sub: "प्रतिदिन मंदिर दर्शन",
     hero_strip_4_sub: "गुरुजी को कॉल या व्हाट्सऐप करें",
 
-    // About
     about_kicker: "नलखेड़ा में · मध्य प्रदेश",
     about_title: "पंडित रघुनंदन शर्मा",
-    about_p1: "पंडित रघुनंदन शर्मा नलखेड़ा मंदिर में बगलामुखी पूजन, अनुष्ठान, हवन और दुर्गा सप्तशती चंडी पाठ संपन्न करते हैं। प्रत्येक पूजा वैदिक विधि से होती है और संकल्प आपके नाम व गोत्र से लिया जाता है।",
+    // UPDATED WITH 20 YEARS EXPERIENCE
+    about_p1: "पंडित रघुनंदन शर्मा, 20 से अधिक वर्षों के अनुभव के साथ, नलखेड़ा मंदिर में बगलामुखी पूजन, अनुष्ठान, हवन और दुर्गा सप्तशती चंडी पाठ संपन्न करते हैं। प्रत्येक पूजा वैदिक विधि से होती है और संकल्प आपके नाम व गोत्र से लिया जाता है।",
     about_p2: "पूजा से पहले वे आवश्यक सामग्री, मुहूर्त और पंडितों की संख्या बताते हैं, ताकि आपको प्रक्रिया और दक्षिणा की जानकारी रहे।",
     about_lang: "बोली जाने वाली भाषाएँ",
     about_btn: "गुरुजी से बात करें",
 
-    // PujaList Headers
     puja_kicker: "अनुष्ठान के क्रम में",
     puja_title: "पूजा क्रम",
     puja_desc: "पूजा संकल्प से लेकर चंडी पाठ तक इसी क्रम में होती है। दक्षिणा चुनी गई पूजा और पंडितों की संख्या पर निर्भर करती है। बुकिंग से पहले गुरुजी बता देते हैं।",
@@ -162,7 +167,24 @@ export const translations = {
     puja_btn_wa: "व्हाट्सऐप पर पूछें",
     puja_step: "चरण",
 
-    // Process
+    // NEW TRANSLATIONS FOR ABOUT PUJA
+    about_puja_kicker: "माँ बगलामुखी की दिव्य कृपा",
+    about_puja_title: "पूजा और लाभ",
+    about_puja_desc: "नलखेड़ा के सिद्ध पीठ में इस पवित्र अनुष्ठान को करने के आध्यात्मिक महत्व और जीवन बदलने वाले लाभों को जानें।",
+    about_puja_p1: "माँ बगलामुखी, दस महाविद्याओं में से आठवीं, विजय और सुरक्षा की देवी के रूप में पूजी जाती हैं। पीतांबरा (पीले रंग की प्रिय) के रूप में जानी जाने वाली, उनकी पूजा बाधाओं को दूर करने, नकारात्मक शक्तियों को हराने और जीवन में सफलता प्राप्त करने के लिए सबसे शक्तिशाली आध्यात्मिक प्रथाओं में से एक मानी जाती है।",
+    about_puja_benefits_title: "पूजा के मुख्य लाभ",
+    about_puja_b1: "कानूनी मामलों में विजय:",
+    about_puja_b1_desc: "अदालत के मामलों में ईश्वरीय हस्तक्षेप, भक्तों को झूठे आरोपों से उबरने और न्याय पाने में मदद करता है।",
+    about_puja_b2: "नकारात्मकता से सुरक्षा:",
+    about_puja_b2_desc: "छिपे हुए दुश्मनों, काला जादू और बुरी नजर के खिलाफ एक शक्तिशाली आध्यात्मिक कवच (रक्षा कवच) बनाता है।",
+    about_puja_b3: "करियर और व्यवसाय में सफलता:",
+    about_puja_b3_desc: "पेशेवर बाधाओं को दूर करता है और भक्तों को प्रतियोगिताओं को जीतने और नेतृत्व के पदों तक पहुंचने में मदद करता है।",
+    about_puja_b4: "मानसिक शांति और स्पष्टता:",
+    about_puja_b4_desc: "मन को शांत करता है, तनाव कम करता है, और बेहतर निर्णय लेने के लिए भय और भ्रम को दूर करता है।",
+    about_puja_b5: "सद्भाव और समृद्धि:",
+    about_puja_b5_desc: "परिवार और घर में स्थिरता, धन और शांति लाता है।",
+    about_puja_p2: "नलखेड़ा में माँ बगलामुखी मंदिर हिंदू पौराणिक कथाओं में एक अनोखा स्थान रखता है। ऐसा माना जाता है कि महाभारत काल के दौरान, युधिष्ठिर ने यहाँ पीले रंग की भेंट के साथ एक विशेष पूजा की थी, और पांडवों को सफलता का आशीर्वाद मिला था। क्योंकि नलखेड़ा में मूर्ति स्वयंभू (स्वयं प्रकट) है और मंदिर को एक सिद्ध पीठ माना जाता है, यहाँ की जाने वाली रस्में विशेष रूप से शक्तिशाली मानी जाती हैं।",
+
     process_kicker: "सरल, व्यक्तिगत, फोन द्वारा",
     process_title: "बुकिंग कैसे होती है",
     process_desc: "चार आसान चरण, सब फोन या व्हाट्सऐप पर।",
@@ -175,7 +197,6 @@ export const translations = {
     process_4_t: "प्रसाद और आशीर्वाद",
     process_4_d: "व्यक्तिगत रूप से या वीडियो कॉल से जुड़ें। प्रसाद आपके पते पर भेजा जा सकता है।",
 
-    // Temple
     temple_kicker: "आगर मालवा में एक पूजा स्थल",
     temple_title: "माँ बगलामुखी मंदिर, नलखेड़ा",
     temple_p1: "मंदिर मध्य प्रदेश के आगर मालवा जिले में नलखेड़ा में लखुंदर नदी के तट पर स्थित है। इसे दतिया और कांगड़ा के साथ भारत के तीन प्राचीन बगलामुखी मंदिरों में गिना जाता है।",
@@ -186,11 +207,9 @@ export const translations = {
     temple_time_4: "मंदिर बंद होता है",
     temple_caption: "माँ बगलामुखी मंदिर, नलखेड़ा में पूजा",
 
-    // Gallery
     gallery_kicker: "पूजा के क्षण",
     gallery_title: "फोटो गैलरी",
 
-    // Reviews
     reviews_kicker: "भक्ति के शब्द",
     reviews_title: "भक्त क्या कहते हैं",
     reviews_desc: "अन्य भक्तों के अनुभव पढ़ें। यदि आपने हमारे साथ पूजा बुक की है, तो हम आपके विचार साझा करने के लिए आभारी होंगे।",
@@ -205,11 +224,9 @@ export const translations = {
     reviews_form_submitting: "सबमिट हो रहा है...",
     reviews_empty: "अभी तक कोई समीक्षा नहीं। अपना अनुभव साझा करने वाले पहले व्यक्ति बनें!",
 
-    // FAQ
     faq_kicker: "बुकिंग से पहले",
     faq_title: "सामान्य प्रश्न",
 
-    // Booking Form
     form_kicker: "बातचीत से शुरू करें",
     form_title: "अपनी पूजा बुक करें",
     form_desc: "अपनी जानकारी भेजें। गुरुजी व्हाट्सऐप पर तारीख, सामग्री और दक्षिणा बताएँगे।",
@@ -229,7 +246,6 @@ export const translations = {
     form_btn_loading: "सेव हो रहा है...",
     form_note: "यह फ़ॉर्म आपका संदेश व्हाट्सऐप में खोलेगा। इस वेबसाइट पर आपकी जानकारी संग्रहीत नहीं होती।",
 
-    // Footer
     footer_desc: "माँ बगलामुखी मंदिर, नलखेड़ा में पंडित रघुनंदन शर्मा के साथ पूजा, हवन और अनुष्ठान।",
     footer_links: "त्वरित लिंक",
     footer_contact: "संपर्क",

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shreebaglamukhinalkheda.com/sitemap.xml

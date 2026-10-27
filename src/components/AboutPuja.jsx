@@ -1,53 +1,53 @@
+import { useLanguage } from '../LanguageContext';
+
 export default function AboutPuja() {
+  const { t } = useLanguage();
+
   return (
     <section id="about-puja" className="py-24 px-5 bg-[#fbf7ee]">
       <div className="mx-auto max-w-4xl">
         <div className="text-center mb-12">
           <span className="text-[#9e7426] uppercase tracking-[0.17em] text-xs font-bold">
-            The Divine Grace of Maa Baglamukhi
+            {t('about_puja_kicker')}
           </span>
           <h2 className="mt-3 font-serif text-5xl text-[#641e17]">
-            Puja & Benefits
+            {t('about_puja_title')}
           </h2>
           <p className="mt-4 text-[#6c5b4f] text-lg">
-            Discover the spiritual significance and life-changing benefits of performing this sacred ritual at the Siddha Peeth of Nalkheda.
+            {t('about_puja_desc')}
           </p>
         </div>
 
         <div className="space-y-8 text-[#5d4c42] text-[17px] leading-relaxed">
-          <p>
-            Maa Baglamukhi, the eighth of the ten Mahavidyas, is revered as the Goddess of Victory and Protection. Known as <strong>Pitambara</strong> (the one who loves yellow), her worship is considered one of the most powerful spiritual practices for overcoming obstacles, defeating negative forces, and attaining success in life.
-          </p>
+          <p>{t('about_puja_p1')}</p>
           
           <div className="bg-[#fffaf0] border border-[#ead9b2] p-6 rounded-lg shadow-sm">
-            <h3 className="font-serif text-2xl text-[#641e17] mb-4">Key Benefits of the Puja</h3>
+            <h3 className="font-serif text-2xl text-[#641e17] mb-4">{t('about_puja_benefits_title')}</h3>
             <ul className="space-y-4">
               <li className="flex gap-3 items-start">
                 <span className="text-[#e8ad2e] text-xl">⚖️</span>
-                <span><strong>Victory in Legal Matters:</strong> Divine intervention in court cases, helping devotees overcome false allegations and achieve justice.</span>
+                <span><strong>{t('about_puja_b1')}</strong> {t('about_puja_b1_desc')}</span>
               </li>
               <li className="flex gap-3 items-start">
                 <span className="text-[#e8ad2e] text-xl">🛡️</span>
-                <span><strong>Protection from Negativity:</strong> Creates a powerful spiritual shield (Raksha Kavach) against hidden enemies, black magic, and the evil eye.</span>
+                <span><strong>{t('about_puja_b2')}</strong> {t('about_puja_b2_desc')}</span>
               </li>
               <li className="flex gap-3 items-start">
                 <span className="text-[#e8ad2e] text-xl">💼</span>
-                <span><strong>Success in Career & Business:</strong> Removes professional obstacles and helps devotees win competitions and achieve leadership positions.</span>
+                <span><strong>{t('about_puja_b3')}</strong> {t('about_puja_b3_desc')}</span>
               </li>
               <li className="flex gap-3 items-start">
                 <span className="text-[#e8ad2e] text-xl">🧠</span>
-                <span><strong>Mental Peace & Clarity:</strong> Calms the mind, reduces stress, and removes fear and confusion for better decision-making.</span>
+                <span><strong>{t('about_puja_b4')}</strong> {t('about_puja_b4_desc')}</span>
               </li>
               <li className="flex gap-3 items-start">
                 <span className="text-[#e8ad2e] text-xl">🏠</span>
-                <span><strong>Harmony & Prosperity:</strong> Brings stability, wealth, and peace to the family and home.</span>
+                <span><strong>{t('about_puja_b5')}</strong> {t('about_puja_b5_desc')}</span>
               </li>
             </ul>
           </div>
 
-          <p>
-            The <strong>Maa Baglamukhi Mandir in Nalkheda</strong> holds a unique place in Hindu mythology. It is believed that during the Mahabharata era, <strong>Yudhishthira</strong> performed a special puja here with yellow offerings to seek victory, and the Pandavas were blessed with success. Because the idol at Nalkheda is <strong>Swayambhu</strong> (self-manifested) and the temple is considered a <em>Siddha Peeth</em>, rituals performed here are believed to be especially powerful.
-          </p>
+          <p>{t('about_puja_p2')}</p>
         </div>
       </div>
     </section>

@@ -21,6 +21,7 @@ export default function About() {
           </h2>
           <p className="mt-6 text-[#5d4c42] text-[17px] leading-[1.65]">{t('about_p1')}</p>
           <p className="mt-4 text-[#5d4c42] text-[17px] leading-[1.65]">{t('about_p2')}</p>
+          
           <div className="mt-8 flex items-center gap-4 border-l-2 border-[#dbad47] pl-4">
              <span className="text-2xl text-[#77675b]">🌺</span>
              <div>
@@ -28,6 +29,7 @@ export default function About() {
                <span className="text-sm text-[#77675b]">{t('about_lang')}</span>
              </div>
           </div>
+          
           <a href="#contact" className="mt-8 inline-flex items-center justify-center rounded-full bg-[#641e17] px-8 py-3.5 font-bold text-[#fffaf0] transition hover:-translate-y-0.5 hover:bg-[#45140f]">
             {t('about_btn')} ↗
           </a>

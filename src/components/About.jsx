@@ -8,7 +8,7 @@ export default function About() {
       <div className="mx-auto max-w-7xl grid md:grid-cols-[0.9fr_1.1fr] gap-16 items-center">
         <div className="relative max-w-[480px] mx-auto md:mx-0">
           <div className="bg-[#fffaf0] border border-[#c29431] p-3 shadow-[18px_20px_0_#eddfbd,0_28px_55px_rgba(53,16,12,0.15)] relative">
-            <img src="/images/puja-6.jpg" alt="Puja offerings" className="w-full aspect-[4/5] object-cover" />
+            <img src="/images/pandit-ji.jpg" alt="Pandit Raghunandan Sharma" className="w-full aspect-[4/5] object-cover" />
             <div className="absolute bottom-8 -right-5 bg-[#641e17] text-[#f8ecd4] px-5 py-3 font-serif italic text-lg max-w-[176px] leading-tight">
               A prayer prepared with care
             </div>

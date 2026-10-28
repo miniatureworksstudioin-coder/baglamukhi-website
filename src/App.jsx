@@ -1,19 +1,15 @@
 import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import { LanguageProvider } from './LanguageContext';
 import NoticePopup from './components/NoticePopup';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import About from './components/About';
-import PujaList from './components/PujaList';
-import AboutPuja from './components/AboutPuja'; // <-- NEW IMPORT
-import Process from './components/Process';
-import Temple from './components/Temple';
-import Gallery from './components/Gallery';
-import Reviews from './components/Reviews';
-import FAQ from './components/FAQ';
-import BookingForm from './components/BookingForm';
 import Footer from './components/Footer';
 import AdminPanel from './components/AdminPanel';
+
+// Import your pages
+import Home from './pages/Home';
+import Pujas from './pages/Pujas';
+import Contact from './pages/Contact';
 
 export default function App() {
   const [isAdminOpen, setIsAdminOpen] = useState(false);
@@ -23,18 +19,15 @@ export default function App() {
       <div className="bg-[#fbf7ee] text-[#2e211b] font-sans antialiased relative">
         <NoticePopup />
         <Header />
+        
         <main>
-          <Hero />
-          <About />
-          <PujaList />
-          <AboutPuja /> {/* <-- NEW SECTION ADDED HERE */}
-          <Process />
-          <Temple />
-          <Gallery />
-          <Reviews />
-          <FAQ />
-          <BookingForm />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/pujas" element={<Pujas />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
         </main>
+
         <Footer onAdminClick={() => setIsAdminOpen(true)} />
         <AdminPanel isOpen={isAdminOpen} onClose={() => setIsAdminOpen(false)} />
       </div>

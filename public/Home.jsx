@@ -5,14 +5,14 @@ import AboutPuja from '../components/AboutPuja';
 import Process from '../components/Process';
 import Temple from '../components/Temple';
 import Gallery from '../components/Gallery';
-import VideoGallery from '../components/VideoGallery';
+import VideoGallery from '../components/VideoGallery'; 
 import Reviews from '../components/Reviews';
 import FAQ from '../components/FAQ';
 import BookingForm from '../components/BookingForm';
 
 export default function Home() {
   return (
-    <>
+    <div>
       <Hero />
       <About />
       <PujaList />
@@ -20,10 +20,10 @@ export default function Home() {
       <Process />
       <Temple />
       <Gallery />
-      <VideoGallery />
+      <VideoGallery /> 
       <Reviews />
       <FAQ />
       <BookingForm />
-    </>
+    </div>
   );
 }

@@ -13,6 +13,11 @@ import BookingForm from '../components/BookingForm';
 export default function Home() {
   return (
     <div>
+      {/* THIS IS THE ULTIMATE TEST */}
+      <div className="bg-green-500 text-white text-center py-20 text-6xl font-bold">
+        HOME.JSX IS WORKING!
+      </div>
+
       <Hero />
       <About />
       <PujaList />

@@ -6,7 +6,6 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import AdminPanel from './components/AdminPanel';
 
-// Import your pages
 import Home from './pages/Home';
 import Pujas from './pages/Pujas';
 import Contact from './pages/Contact';

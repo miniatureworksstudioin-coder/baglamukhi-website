@@ -36,6 +36,20 @@ export default function Footer({ onAdminClick }) {
           Admin Sign-in
         </button>
       </div>
+
+      {/* NEW: Designer Credit Section */}
+      <div className="mx-auto max-w-7xl mt-6 text-center text-xs text-[#b8a786]">
+        Website designed by Aakash |{' '}
+        <a 
+          href="https://miniatureworksstudio.com" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="underline decoration-[#f0c75c]/30 underline-offset-4 hover:text-[#f0c75c] transition-colors"
+        >
+          miniatureworksstudio.com
+        </a>
+      </div>
+
     </footer>
   );
 }

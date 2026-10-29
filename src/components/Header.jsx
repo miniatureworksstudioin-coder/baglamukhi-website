@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom'; 
 import { ADDRESS, PHONE_DISPLAY, PHONE_TEL, PHONE2_DISPLAY, PHONE2_TEL, WHATSAPP_URL } from '../contact';
 import { useLanguage } from '../LanguageContext';
 
@@ -6,14 +7,15 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { language, toggleLanguage, t } = useLanguage();
 
+  // UPDATED NAV LINKS TO POINT TO NEW PAGES
   const NAV_LINKS = [
-    { label: t('nav_home'), href: '#top' },
-    { label: t('nav_about'), href: '#about' },
-    { label: t('nav_puja'), href: '#services' },
-    { label: t('nav_temple'), href: '#temple' },
-    { label: t('nav_gallery'), href: '#gallery' },
-    { label: t('nav_reviews'), href: '#reviews' },
-    { label: t('nav_contact'), href: '#contact' },
+    { label: t('nav_home'), href: '/' },
+    { label: t('nav_about'), href: '/#about' },
+    { label: t('nav_puja'), href: '/pujas' }, // Goes to new Pujas page
+    { label: t('nav_temple'), href: '/temple' }, // Goes to new Temple page
+    { label: t('nav_gallery'), href: '/#gallery' },
+    { label: t('nav_reviews'), href: '/#reviews' },
+    { label: t('nav_contact'), href: '/contact' }, // Goes to new Contact page
   ];
 
   return (
@@ -46,9 +48,8 @@ export default function Header() {
       <header className="sticky top-0 z-50 border-b border-[#e5d8c5] bg-[#fbf7ee]/90 backdrop-blur-lg">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-5">
           
-          <a href="#top" className="flex items-center gap-2.5 sm:gap-3">
-            
-            {/* NEW LOGO IMAGE HERE */}
+          {/* Logo goes to Home */}
+          <Link to="/" className="flex items-center gap-2.5 sm:gap-3">
             <img 
               src="/baglamukhi-logo.png?v=2" 
               alt="Shree Baglamukhi Nalkheda Logo" 
@@ -63,14 +64,14 @@ export default function Header() {
                 Pandit Raghunandan Sharma
               </span>
             </span>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden items-center gap-1 lg:flex">
             {NAV_LINKS.map((link) => (
-              <a key={link.href} href={link.href} className="rounded-md px-3 py-2 text-[15px] font-semibold text-[#46342d] transition-colors hover:bg-[#f2e8d5] hover:text-[#641e17]">
+              <Link key={link.href} to={link.href} className="rounded-md px-3 py-2 text-[15px] font-semibold text-[#46342d] transition-colors hover:bg-[#f2e8d5] hover:text-[#641e17]">
                 {link.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -81,9 +82,10 @@ export default function Header() {
               {language === 'en' ? 'हिन्दी' : 'English'}
             </button>
             
-            <a href="#contact" className="hidden rounded-full bg-[#efbd48] px-5 py-2.5 font-bold text-[#35100c] shadow-[0_8px_24px_rgba(208,153,43,0.25)] transition hover:-translate-y-0.5 hover:bg-[#f7cb66] sm:inline-flex">
+            {/* Book Puja Button goes to Contact page */}
+            <Link to="/contact" className="hidden rounded-full bg-[#efbd48] px-5 py-2.5 font-bold text-[#35100c] shadow-[0_8px_24px_rgba(208,153,43,0.25)] transition hover:-translate-y-0.5 hover:bg-[#f7cb66] sm:inline-flex">
               {t('btn_book')}
-            </a>
+            </Link>
 
             <button onClick={() => setMenuOpen(!menuOpen)} className="grid h-10 w-10 place-items-center rounded-full border border-[#baa780] text-[#641e17] lg:hidden bg-white/50">
               {menuOpen ? '✕' : '☰'}
@@ -97,9 +99,9 @@ export default function Header() {
             <ul className="flex flex-col gap-1">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
-                  <a href={link.href} onClick={() => setMenuOpen(false)} className="block rounded-lg px-3 py-2.5 font-semibold text-[#46342d] hover:bg-[#f2e8d5]">
+                  <Link to={link.href} onClick={() => setMenuOpen(false)} className="block rounded-lg px-3 py-2.5 font-semibold text-[#46342d] hover:bg-[#f2e8d5]">
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

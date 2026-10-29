@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { PHONE_DISPLAY, PHONE_TEL, PHONE2_DISPLAY, PHONE2_TEL } from '../contact';
 
 export default function Footer({ onAdminClick }) {
@@ -36,14 +37,19 @@ export default function Footer({ onAdminClick }) {
         <p className="text-center lg:text-left flex-1">Beware of third-party apps or brokers using our name.</p>
         
         <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4">
-          <a href="/terms" className="hover:text-[#f0c75c] transition-colors">
+          {/* CHANGED TO <Link> FOR SMOOTH REACT ROUTING */}
+          <Link to="/terms" className="hover:text-[#f0c75c] transition-colors">
             Terms of Service
-          </a>
+          </Link>
+          
           <span className="text-[#fff3d72e]">|</span>
-          <a href="/privacy" className="hover:text-[#f0c75c] transition-colors">
+          
+          <Link to="/privacy" className="hover:text-[#f0c75c] transition-colors">
             Privacy Policy
-          </a>
+          </Link>
+          
           <span className="text-[#fff3d72e]">|</span>
+          
           <button onClick={onAdminClick} className="hover:text-[#f0c75c] underline decoration-[#f0c75c]/30 underline-offset-4 transition-colors">
             Admin Sign-in
           </button>

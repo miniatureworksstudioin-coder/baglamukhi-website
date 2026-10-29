@@ -24,8 +24,11 @@ export default function PujaDetail() {
     );
   }
 
-  // Helper to pick Hindi or English text
-  const getText = (field) => language === 'hi' ? puja[`${field}_hi`] || puja[field] : puja[field];
+  // DYNAMIC HELPER FUNCTION FOR 4 LANGUAGES
+  const getText = (field) => {
+    if (language === 'en') return puja[field];
+    return puja[`${field}_${language}`] || puja[field]; // Falls back to English if translation is missing
+  };
 
   return (
     <div className="min-h-screen bg-[#fbf7ee] py-20 px-5">

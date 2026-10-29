@@ -30,6 +30,13 @@ export default function PujaDetail() {
     return puja[`${field}_${language}`] || puja[field]; // Falls back to English if translation is missing
   };
 
+  // HELPER FUNCTION FOR THE TITLE SCRIPT
+  const getScriptName = () => {
+    if (language === 'gu') return puja.hindi_gu || puja.hindi;
+    if (language === 'mr') return puja.hindi_mr || puja.hindi;
+    return puja.hindi;
+  };
+
   return (
     <div className="min-h-screen bg-[#fbf7ee] py-20 px-5">
       <div className="mx-auto max-w-4xl bg-white rounded-2xl shadow-xl border border-[#e5d8c5] overflow-hidden">
@@ -41,7 +48,8 @@ export default function PujaDetail() {
               <span className="bg-[#f0c25a] text-[#641e17] px-3 py-1 text-xs font-bold rounded-full mb-3 inline-block">
                 {t('puja_step')} {String(puja.id).padStart(2, '0')}
               </span>
-              <h1 className="text-4xl md:text-5xl font-serif text-white">{puja.hindi}</h1>
+              {/* CHANGED TO USE DYNAMIC SCRIPT NAME */}
+              <h1 className="text-4xl md:text-5xl font-serif text-white">{getScriptName()}</h1>
               <h2 className="text-2xl font-serif text-[#f0c25a] mt-1">{puja.name}</h2>
             </div>
           </div>

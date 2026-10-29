@@ -17,15 +17,14 @@ export default function PanchangWidget() {
             </p>
           </div>
 
-          {/* The Interactive Widget Box - Fixed Height */}
+          {/* The Interactive Widget Box - Cropped perfectly */}
           <div className="flex justify-center md:justify-end w-full">
             <div className="rounded-xl overflow-hidden shadow-xl border-4 border-[#e6d5b3] bg-white w-full max-w-[380px]">
               <iframe 
                 src="https://www.mypanchang.com/mypanchangwidget.php" 
                 title="Today's panchang" 
-                width="100%" 
-                height="175" 
-                className="block w-full border-0"
+                className="block w-full border-0 m-0 p-0"
+                style={{ height: '155px', width: '100%', overflow: 'hidden' }}
                 loading="lazy"
                 scrolling="no"
               ></iframe>

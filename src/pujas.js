@@ -1,6 +1,6 @@
 const rawPujas = [
   {
-    hindi: 'संकल्प', name: 'Sankalp', slug: 'sankalp',
+    hindi: 'संकल्प', hindi_gu: 'સંકલ્પ', hindi_mr: 'संकल्प', name: 'Sankalp', slug: 'sankalp',
     shortDesc: 'The start of every puja. You state your name, gotra, place and purpose, and take a vow before Maa.',
     description: 'Sankalp is the formal vow taken at the beginning of every Vedic ritual. It involves stating your name, gotra, location, and the specific purpose (reason) for the Puja. This connects you spiritually to the ritual and ensures the ceremony is performed in your name.',
     benefits: 'It ensures the spiritual merits of the ritual are transferred directly to you and sets a strong, clear intention for the ceremony.',
@@ -21,7 +21,7 @@ const rawPujas = [
     includes_mr: 'तुमचे नाव, गोत्र आणि विशिष्ट समस्या/इच्छेसह संकल्प विधी.'
   },
   {
-    hindi: 'गौरी गणेश पूजन', name: 'Gauri Ganesh Pujan', slug: 'gauri-ganesh-pujan',
+    hindi: 'गौरी गणेश पूजन', hindi_gu: 'ગૌરી ગણેશ પૂજન', hindi_mr: 'गौरी गणेश पूजन', name: 'Gauri Ganesh Pujan', slug: 'gauri-ganesh-pujan',
     shortDesc: 'Worship of Gauri and Ganesh ji first, so that the puja begins without obstacles.',
     description: 'Before any major Havan or Anushthan, Lord Ganesha and Goddess Gauri are worshipped. Ganesha removes all obstacles, and Gauri brings prosperity and auspiciousness to the ritual.',
     benefits: 'Clears negative energy, removes hurdles in the upcoming ritual, and brings peace and harmony to the devotee\'s life.',
@@ -42,7 +42,7 @@ const rawPujas = [
     includes_mr: 'गणेश आणि गौरीच्या मूर्ती, पिवळी फुले, ताजी फळे, पंचामृत आणि वैदिक मंत्र.'
   },
   {
-    hindi: 'स्थापित सर्व मंडल पूजन', name: 'Sthapit Sarva Mandal Pujan', slug: 'sthapit-sarva-mandal-pujan',
+    hindi: 'स्थापित सर्व मंडल पूजन', hindi_gu: 'સ્થાપિત સર્વ મંડળ પૂજન', hindi_mr: 'स्थापित सर्व मंडळ पूजन', name: 'Sthapit Sarva Mandal Pujan', slug: 'sthapit-sarva-mandal-pujan',
     shortDesc: 'Worship of all the deities invited and installed on the mandal for the ceremony.',
     description: 'A sacred ritual where all the deities presiding over the mandal (sacred space) are invoked and worshipped to create a highly divine and charged atmosphere.',
     benefits: 'Brings the collective blessings of all the deities to the ceremony, ensuring maximum spiritual benefit.',
@@ -63,7 +63,7 @@ const rawPujas = [
     includes_mr: 'मंडळ स्थापना, कलश स्थापना, सर्व वैदिक देवतांचे आवाहन.'
   },
   {
-    hindi: 'बगलामुखी पूजन', name: 'Baglamukhi Pujan', slug: 'baglamukhi-pujan',
+    hindi: 'बगलामुखी पूजन', hindi_gu: 'બગલામુખી પૂજન', hindi_mr: 'बगलामुखी पूजन', name: 'Baglamukhi Pujan', slug: 'baglamukhi-pujan',
     shortDesc: 'Main worship of Maa Baglamukhi with yellow flowers, turmeric, haldi-kumkum and naivedya.',
     description: 'The primary worship of Maa Baglamukhi using her favorite items, especially yellow flowers and turmeric. Devotees pray to the Goddess for protection and victory over obstacles.',
     benefits: 'Provides protection from enemies, removes negativity, and helps overcome legal and financial troubles.',
@@ -84,7 +84,7 @@ const rawPujas = [
     includes_mr: 'हळद-कुंकू, पिवळी फुले, पिवळी मिठाई, बगलामुखी यंत्र पूजा.'
   },
   {
-    hindi: 'बगलामुखी अभिषेक', name: 'Baglamukhi Abhishek', slug: 'baglamukhi-abhishek',
+    hindi: 'बगलामुखी अभिषेक', hindi_gu: 'બગલામુખી અભિષેક', hindi_mr: 'बगलामुखी अभिषेक', name: 'Baglamukhi Abhishek', slug: 'baglamukhi-abhishek',
     shortDesc: 'Ritual bathing of the deity with sacred materials, along with the mantras.',
     description: 'The ceremonial bathing of the divine idol with Panchamrit (milk, honey, ghee, sugar, curd) and pure water, while chanting powerful Vedic mantras.',
     benefits: 'Purifies the mind and soul, brings peace, and invites the divine grace of Maa Baglamukhi into your life.',
@@ -105,7 +105,7 @@ const rawPujas = [
     includes_mr: 'पंचामृत अभिषेक, गंगाजल, ताजी फुले आणि विशिष्ट बगलामुखी मंत्र.'
   },
   {
-    hindi: 'बगलामुखी अर्चन', name: 'Baglamukhi Archan', slug: 'baglamukhi-archan',
+    hindi: 'बगलामुखी अर्चन', hindi_gu: 'બગલામુખી અર્ચન', hindi_mr: 'बगलामुखी अर्चन', name: 'Baglamukhi Archan', slug: 'baglamukhi-archan',
     shortDesc: 'Offering of flowers and names of Maa Baglamukhi one by one, with mantra.',
     description: 'A deeply devotional practice where 108 or 1008 names of the Goddess are chanted while offering flowers to the deity.',
     benefits: 'Brings immense peace, fulfills specific desires, and fosters a deep spiritual connection with the Goddess.',
@@ -126,7 +126,7 @@ const rawPujas = [
     includes_mr: 'माँ बगलामुखीची १०८/१००८ नावे, ताज्या फुलांचे अर्पण आणि भक्तीपूर्ण जप.'
   },
   {
-    hindi: 'बगलामुखी आवरण', name: 'Baglamukhi Avaran', slug: 'baglamukhi-avaran',
+    hindi: 'बगलामुखी आवरण', hindi_gu: 'બગલામુખી આવરણ', hindi_mr: 'बगलामुखी आवरण', name: 'Baglamukhi Avaran', slug: 'baglamukhi-avaran',
     shortDesc: 'Worship of the attendant deities who surround Maa on the yantra.',
     description: 'A ritual dedicated to the protective forces and attendant deities (Avaran Devatas) that surround Maa Baglamukhi\'s Yantra, forming a shield of divine energy.',
     benefits: 'Creates a powerful spiritual shield (Raksha Kavach) around the devotee, protecting them from hidden enemies and negative energies.',
@@ -147,7 +147,7 @@ const rawPujas = [
     includes_mr: 'आवरण देवता मंत्र, रक्षा कवच सेटअप आणि संरक्षणात्मक यंत्र पूजा.'
   },
   {
-    hindi: 'बगलामुखी पाठ', name: 'Baglamukhi Path', slug: 'baglamukhi-path',
+    hindi: 'बगलामुखी पाठ', hindi_gu: 'બગલામુખી પાઠ', hindi_mr: 'बगलामुखी पाठ', name: 'Baglamukhi Path', slug: 'baglamukhi-path',
     shortDesc: 'Recitation of the Baglamukhi stotra and kavach by the pandit.',
     description: 'The continuous recitation of the powerful Baglamukhi Stotra and Kavach by learned pandits to invoke the Goddess\'s protective energy.',
     benefits: 'Removes fear, destroys negative thoughts, and provides immense mental strength and courage.',
@@ -168,7 +168,7 @@ const rawPujas = [
     includes_mr: 'बगलामुखी स्तोत्र पाठ, कवच पाठ आणि वैदिक पंडित.'
   },
   {
-    hindi: 'बगलामुखी महा विशेष अनुष्ठान', name: 'Baglamukhi Maha Vishesh Anushthan', slug: 'baglamukhi-maha-vishesh-anushthan',
+    hindi: 'बगलामुखी महा विशेष अनुष्ठान', hindi_gu: 'બગલામુખી મહા વિશેષ અનુષ્ઠાન', hindi_mr: 'बगलामुखी महा विशेष अनुष्ठान', name: 'Baglamukhi Maha Vishesh Anushthan', slug: 'baglamukhi-maha-vishesh-anushthan',
     shortDesc: 'The complete, extended anushthan with jaap and all ritual steps done in full.',
     description: 'An elaborate, multi-day spiritual practice involving intense chanting (Jaap), Havan, and complete Vedic procedures dedicated to Maa Baglamukhi.',
     benefits: 'Highly effective for overcoming severe life obstacles, chronic problems, and achieving major life goals.',
@@ -189,7 +189,7 @@ const rawPujas = [
     includes_mr: 'बहु-दिवसीय जप, पूर्णाहुती हवन आणि संपूर्ण वैदिक प्रोटोकॉल.'
   },
   {
-    hindi: 'बगलामुखी औषधि महा विशेष हवन', name: 'Baglamukhi Aushadhi Maha Vishesh Havan', slug: 'baglamukhi-aushadhi-maha-vishesh-havan',
+    hindi: 'बगलामुखी औषधि महा विशेष हवन', hindi_gu: 'બગલામુખી ઔષધિ મહા વિશેષ હવન', hindi_mr: 'बगलामुखी औषधी महा विशेष हवन', name: 'Baglamukhi Aushadhi Maha Vishesh Havan', slug: 'baglamukhi-aushadhi-maha-vishesh-havan',
     shortDesc: 'A grand havan using herbal materials (aushadhi) as offerings in the fire.',
     description: 'A special Havan where specific sacred herbs and medicinal plants (Aushadhi) are offered into the fire along with Vedic mantras.',
     benefits: 'Promotes physical and mental healing, removes diseases, and purifies the environment.',
@@ -210,7 +210,7 @@ const rawPujas = [
     includes_mr: 'दुर्मिळ आयुर्वेदिक औषधी वनस्पती, विशिष्ट हवन साहित्य आणि उपचार मंत्र.'
   },
   {
-    hindi: 'दुर्गा सप्तशती नव चंडी पाठ', name: 'Durga Saptashati Nav Chandi Path', slug: 'durga-saptashati-nav-chandi-path',
+    hindi: 'दुर्गा सप्तशती नव चंडी पाठ', hindi_gu: 'દુર્ગા સપ્તશતી નવ ચંડી પાઠ', hindi_mr: 'दुर्गा सप्तशती नव चंडी पाठ', name: 'Durga Saptashati Nav Chandi Path', slug: 'durga-saptashati-nav-chandi-path',
     shortDesc: 'Nine recitations of the Durga Saptashati, followed by havan.',
     description: 'A powerful ritual involving the recitation of the 700 verses of Durga Saptashati nine times, culminating in a sacred Havan.',
     benefits: 'Destroys negativity, removes fear, and brings immense prosperity, protection, and success.',
@@ -231,7 +231,7 @@ const rawPujas = [
     includes_mr: 'पंडितांच्या टीमद्वारे नव चंडी पाठ, त्यानंतर एक भव्य हवन.'
   },
   {
-    hindi: 'दुर्गा सप्तशती सत चंडी पाठ', name: 'Durga Saptashati Sat Chandi Path', slug: 'durga-saptashati-sat-chandi-path',
+    hindi: 'दुर्गा सप्तशती सत चंडी पाठ', hindi_gu: 'દુર્ગા સપ્તશતી સત ચંડી પાઠ', hindi_mr: 'दुर्गा सप्तशती सत चंडी पाठ', name: 'Durga Saptashati Sat Chandi Path', slug: 'durga-saptashati-sat-chandi-path',
     shortDesc: 'One hundred recitations of the Durga Saptashati by a team of pandits.',
     description: 'A massive, highly auspicious ritual where a team of pandits collectively recites the Durga Saptashati one hundred times.',
     benefits: 'Brings ultimate protection, fulfills the most difficult wishes, and creates an incredibly powerful spiritual atmosphere.',

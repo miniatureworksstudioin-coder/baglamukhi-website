@@ -80,7 +80,6 @@ export const translations = {
     temple_timing_note: "Timings can change on festival days. Please confirm with Guruji before travelling.",
     temple_caption: "Worship at Maa Baglamukhi Mandir, Nalkheda",
 
-    // Full Temple Page
     temple_page_title: "Maa Baglamukhi Mandir, Nalkheda",
     temple_page_subtitle: "A Sacred Shakti Peeth on the banks of the Lakhundar River in Agar Malwa, Madhya Pradesh.",
     temple_timings_title: "Darshan & Aarti Timings",
@@ -96,7 +95,6 @@ export const translations = {
     temple_planning_desc: "Book a Havan or Anushthan at Nalkheda performed by Pandit Raghunandan Sharma.",
     temple_explore_pujas: "Explore Puja Services",
 
-    // Puja Detail Page
     puja_back: "← Back to all Pujas",
     puja_about: "About this Ritual",
     puja_who_for: "Who is this Puja for?",
@@ -143,6 +141,28 @@ export const translations = {
     form_btn_submit: "Send on WhatsApp",
     form_btn_loading: "Saving...",
     form_note: "This form opens WhatsApp with your message. We do not store your details on this website.",
+
+    // TERMS & PRIVACY TRANSLATIONS
+    terms_title: "Terms of Service",
+    terms_welcome: "Welcome to Shree Baglamukhi Nalkheda. By using our website and booking a Puja, you agree to the following terms:",
+    terms_h1: "1. Puja Bookings",
+    terms_p1: "All Pujas, Havans, and Anushthans are performed strictly according to Vedic rituals at the Nalkheda Mandir. The dakshina (cost) depends on the type of ritual, samagri, and number of pandits. Final costs will be communicated via WhatsApp or phone call before confirmation.",
+    terms_h2: "2. No Guarantee of Results",
+    terms_p2: "As per Hindu scriptures, the outcome of any spiritual ritual depends on divine will, the devotee's faith, and past karma. We do not promise or guarantee specific material, legal, or medical results. Our Pujas do not replace professional medical, legal, or financial advice.",
+    terms_h3: "3. Online vs In-Person",
+    terms_p3: "Devotees can participate in person or via video call. Prasad can be couriered to your address (shipping times may vary).",
+    terms_last_updated: "Last updated: October 2026",
+
+    privacy_title: "Privacy Policy",
+    privacy_p1: "At Shree Baglamukhi Nalkheda, we respect your privacy and are committed to protecting your personal data.",
+    privacy_h1: "1. Information We Collect",
+    privacy_p2: "When you fill out the booking form, we collect your Name, Phone Number, Puja Type, Preferred Date, and any messages you provide. This information is securely stored in our database (Supabase) and sent to Pandit Ji via WhatsApp and Email.",
+    privacy_h2: "2. How We Use Your Data",
+    privacy_p3: "Your information is used strictly to contact you regarding your Puja booking, to perform the Sankalp in your name, and to arrange for Prasad delivery if needed. We do not sell, rent, or share your personal information with third-party marketing companies.",
+    privacy_h3: "3. Cookies & Analytics",
+    privacy_p4: "We may use basic cookies or analytics tools to understand how visitors use our website. This helps us improve your experience but does not collect personally identifiable information.",
+    privacy_h4: "4. Contact Us",
+    privacy_p5: "If you have any questions about this Privacy Policy, please contact us at shreebaglamukhinalkheda@gmail.com.",
 
     footer_desc: "Puja, havan and anushthan at the Maa Baglamukhi Mandir, Nalkheda, with Pandit Raghunandan Sharma.",
     footer_links: "Quick links",
@@ -232,7 +252,6 @@ export const translations = {
     temple_timing_note: "त्योहारों के दिनों में समय बदल सकता है। कृपया यात्रा करने से पहले गुरुजी से पुष्टि करें।",
     temple_caption: "माँ बगलामुखी मंदिर, नलखेड़ा में पूजा",
 
-    // Full Temple Page
     temple_page_title: "मां बगलामुखी मंदिर, नलखेड़ा",
     temple_page_subtitle: "आगर मालवा, मध्य प्रदेश में लखुंदर नदी के तट पर स्थित एक पवित्र शक्ति पीठ।",
     temple_timings_title: "दर्शन एवं आरती का समय",
@@ -248,7 +267,6 @@ export const translations = {
     temple_planning_desc: "पंडित रघुनंदन शर्मा द्वारा नलखेड़ा में की जाने वाली हवन या अनुष्ठान बुक करें।",
     temple_explore_pujas: "पूजा सेवाएं देखें",
 
-    // Puja Detail Page
     puja_back: "← सभी पूजाओं पर वापस जाएं",
     puja_about: "इस अनुष्ठान के बारे में",
     puja_who_for: "यह पूजा किसके लिए है?",
@@ -295,6 +313,28 @@ export const translations = {
     form_btn_submit: "व्हाट्सऐप पर भेजें",
     form_btn_loading: "सेव हो रहा है...",
     form_note: "यह फ़ॉर्म आपका संदेश व्हाट्सऐप में खोलेगा। इस वेबसाइट पर आपकी जानकारी संग्रहीत नहीं होती।",
+
+    // TERMS & PRIVACY TRANSLATIONS
+    terms_title: "सेवा की शर्तें",
+    terms_welcome: "श्री बगलामुखी नलखेड़ा में आपका स्वागत है। हमारी वेबसाइट का उपयोग करके और पूजा बुक करके, आप निम्नलिखित शर्तों से सहमत होते हैं:",
+    terms_h1: "1. पूजा बुकिंग",
+    terms_p1: "सभी पूजा, हवन और अनुष्ठान नलखेड़ा मंदिर में वैदिक रीति-रिवाजों के अनुसार सख्ती से किए जाते हैं। दक्षिणा (लागत) अनुष्ठान के प्रकार, सामग्री और पंडितों की संख्या पर निर्भर करती है। पुष्टि से पहले अंतिम लागत व्हाट्सएप या फोन कॉल के माध्यम से बताई जाएगी।",
+    terms_h2: "2. परिणामों की कोई गारंटी नहीं",
+    terms_p2: "हिंदू शास्त्रों के अनुसार, किसी भी आध्यात्मिक अनुष्ठान का परिणाम ईश्वरीय इच्छा, भक्त की आस्था और पिछले कर्मों पर निर्भर करता है। हम विशिष्ट भौतिक, कानूनी या चिकित्सा परिणामों का वादा या गारंटी नहीं देते हैं। हमारी पूजा पेशेवर चिकित्सा, कानूनी या वित्तीय सलाह की जगह नहीं लेती है।",
+    terms_h3: "3. ऑनलाइन बनाम व्यक्तिगत रूप से",
+    terms_p3: "भक्त व्यक्तिगत रूप से या वीडियो कॉल के माध्यम से भाग ले सकते हैं। प्रसाद आपके पते पर कूरियर किया जा सकता है (शिपिंग समय भिन्न हो सकता है)।",
+    terms_last_updated: "अंतिम अद्यतन: अक्टूबर 2026",
+
+    privacy_title: "गोपनीयता नीति",
+    privacy_p1: "श्री बगलामुखी नलखेड़ा में, हम आपकी गोपनीयता का सम्मान करते हैं और आपके व्यक्तिगत डेटा की रक्षा के लिए प्रतिबद्ध हैं।",
+    privacy_h1: "1. हम कौन सी जानकारी एकत्र करते हैं",
+    privacy_p2: "जब आप बुकिंग फॉर्म भरते हैं, तो हम आपका नाम, फोन नंबर, पूजा का प्रकार, पसंदीदा तारीख और आपके द्वारा दिए गए किसी भी संदेश को एकत्र करते हैं। यह जानकारी हमारे डेटाबेस (सुपाबेस) में सुरक्षित रूप से संग्रहीत की जाती है और व्हाट्सएप और ईमेल के माध्यम से पंडित जी को भेजी जाती है।",
+    privacy_h2: "2. हम आपके डेटा का उपयोग कैसे करते हैं",
+    privacy_p3: "आपकी जानकारी का उपयोग पूजा बुकिंग के संबंध में आपसे संपर्क करने, आपके नाम पर संकल्प करने और यदि आवश्यक हो तो प्रसाद वितरण की व्यवस्था करने के लिए सख्ती से किया जाता है। हम आपकी व्यक्तिगत जानकारी को तृतीय-पक्ष विपणन कंपनियों को नहीं बेचते, किराए पर नहीं देते या साझा नहीं करते हैं।",
+    privacy_h3: "3. कुकीज़ और एनालिटिक्स",
+    privacy_p4: "हम यह समझने के लिए बुनियादी कुकीज़ या एनालिटिक्स टूल का उपयोग कर सकते हैं कि आगंतुक हमारी वेबसाइट का उपयोग कैसे करते हैं। यह आपके अनुभव को बेहतर बनाने में मदद करता है लेकिन व्यक्तिगत रूप से पहचान योग्य जानकारी एकत्र नहीं करता है।",
+    privacy_h4: "4. हमसे संपर्क करें",
+    privacy_p5: "यदि इस गोपनीयता नीति के बारे में आपके कोई प्रश्न हैं, तो कृपया हमसे shreebaglamukhinalkheda@gmail.com पर संपर्क करें।",
 
     footer_desc: "माँ बगलामुखी मंदिर, नलखेड़ा में पंडित रघुनंदन शर्मा के साथ पूजा, हवन और अनुष्ठान।",
     footer_links: "त्वरित लिंक",

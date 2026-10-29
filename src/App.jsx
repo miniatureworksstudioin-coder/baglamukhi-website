@@ -8,7 +8,7 @@ import FloatingWhatsApp from './components/FloatingWhatsApp';
 import Home from './pages/Home';
 import Pujas from './pages/Pujas';
 import PujaDetail from './pages/PujaDetail'; 
-import Temple from './pages/Temple'; // <-- ADDED TEMPLE IMPORT
+import Temple from './pages/Temple'; 
 import Contact from './pages/Contact';
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';

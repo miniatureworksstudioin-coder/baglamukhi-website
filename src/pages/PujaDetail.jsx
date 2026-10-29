@@ -1,10 +1,18 @@
 import { useParams, Link } from 'react-router-dom';
+import { useEffect } from 'react';
 import { pujas } from '../pujas';
 import { whatsappLink } from '../contact';
 
 export default function PujaDetail() {
   const { slug } = useParams();
   const puja = pujas.find((p) => p.slug === slug);
+
+  // This dynamically updates the Google Search Title for every puja!
+  useEffect(() => {
+    if (puja) {
+      document.title = `${puja.name} in Nalkheda | Book Online at Shree Baglamukhi`;
+    }
+  }, [puja]);
 
   if (!puja) {
     return (
@@ -26,7 +34,7 @@ export default function PujaDetail() {
               <span className="bg-[#f0c25a] text-[#641e17] px-3 py-1 text-xs font-bold rounded-full mb-3 inline-block">
                 Step {String(puja.id).padStart(2, '0')}
               </span>
-              <h1 className="text-4xl md:text-5xl font-serif text-white">{puja.hindiName}</h1>
+              <h1 className="text-4xl md:text-5xl font-serif text-white">{puja.hindi}</h1>
               <h2 className="text-2xl font-serif text-[#f0c25a] mt-1">{puja.name}</h2>
             </div>
           </div>
@@ -44,8 +52,18 @@ export default function PujaDetail() {
             </div>
 
             <div>
+              <h3 className="text-2xl font-serif text-[#641e17] mb-3 border-b border-[#e5d8c5] pb-2">Who is this Puja for?</h3>
+              <p className="text-[#5d4c42] text-lg leading-relaxed">{puja.whoIsItFor}</p>
+            </div>
+
+            <div>
               <h3 className="text-2xl font-serif text-[#641e17] mb-3 border-b border-[#e5d8c5] pb-2">Key Benefits</h3>
               <p className="text-[#5d4c42] text-lg leading-relaxed">{puja.benefits}</p>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-serif text-[#641e17] mb-3 border-b border-[#e5d8c5] pb-2">What is included?</h3>
+              <p className="text-[#5d4c42] text-lg leading-relaxed">{puja.includes}</p>
             </div>
 
             <div className="bg-[#f8ecd4] p-6 rounded-xl border border-[#e6d5b3] flex items-center justify-between flex-wrap gap-4">

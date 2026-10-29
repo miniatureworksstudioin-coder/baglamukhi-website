@@ -10,7 +10,7 @@ import Pujas from './pages/Pujas';
 import Contact from './pages/Contact';
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
-import Admin from './pages/Admin'; // <-- Imported new Admin page
+import Admin from './pages/Admin'; 
 
 export default function App() {
   return (
@@ -25,10 +25,10 @@ export default function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/privacy" element={<Privacy />} />
-            <Route path="/admin" element={<Admin />} /> {/* <-- Secret Route */}
+            <Route path="/admin" element={<Admin />} /> 
           </Routes>
         </main>
-        <Footer />
+        <Footer />  {/* <--- THIS IS THE ONLY PLACE IT SHOULD BE */}
         <FloatingWhatsApp /> 
       </div>
     </LanguageProvider>

@@ -16,9 +16,16 @@ export default function Temple() {
           <p className="mt-6 text-[#e3d4b8] text-[17px] leading-[1.65]">
             {t('temple_p1')}
           </p>
+          
+          {/* NEW WIKIPEDIA SEO FACTS ADDED HERE */}
+          <p className="mt-4 text-[#e3d4b8] text-[17px] leading-[1.65]">
+            Located on the banks of the <strong>Lakhundar River</strong> (a tributary of the Narmada), this ancient Siddha Peeth was historically <strong>restored in 1815</strong>. The unique feature of this temple is the central icon, which is a <strong>triad (three deities)</strong>: Goddess Parvati in the center as Baglamukhi, with Goddess Lakshmi on her right and Goddess Saraswati on her left.
+          </p>
+          
           <p className="mt-4 text-[#e3d4b8] text-[17px] leading-[1.65]">
             {t('temple_p2')}
           </p>
+          
           <table className="mt-8 w-full border-collapse">
             <tbody>
               <tr className="border-b border-[#f5e6c72b]">
@@ -43,8 +50,9 @@ export default function Temple() {
             Timings can change on festival days. Please confirm with Guruji before travelling.
           </p>
         </div>
+        
         <div className="bg-[#50190f] border border-[#bc8720] p-2.5 shadow-[0_28px_60px_rgba(0,0,0,0.25)]">
-          <img src="/images/puja-3.jpg" alt="Temple worship" className="w-full aspect-[4/3] object-cover" />
+          <img src="/images/puja-3.jpg" alt="Baglamukhi Temple Nalkheda worship" className="w-full aspect-[4/3] object-cover" />
           <p className="mt-3 text-xs text-[#d8c9aa] uppercase tracking-[0.1em]">
             {t('temple_caption')}
           </p>

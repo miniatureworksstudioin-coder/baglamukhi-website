@@ -7,6 +7,7 @@ import FloatingWhatsApp from './components/FloatingWhatsApp';
 
 import Home from './pages/Home';
 import Pujas from './pages/Pujas';
+import PujaDetail from './pages/PujaDetail'; // <-- ADDED THIS IMPORT
 import Contact from './pages/Contact';
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
@@ -22,13 +23,17 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/pujas" element={<Pujas />} />
+            
+            {/* ADDED THIS DYNAMIC ROUTE */}
+            <Route path="/pujas/:slug" element={<PujaDetail />} /> 
+            
             <Route path="/contact" element={<Contact />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/admin" element={<Admin />} /> 
           </Routes>
         </main>
-        <Footer />  {/* <--- THIS IS THE ONLY PLACE IT SHOULD BE */}
+        <Footer />
         <FloatingWhatsApp /> 
       </div>
     </LanguageProvider>

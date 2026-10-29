@@ -47,9 +47,14 @@ export default function Header() {
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-5">
           
           <a href="#top" className="flex items-center gap-2.5 sm:gap-3">
-            <span className="grid h-10 w-10 sm:h-11 sm:w-11 shrink-0 place-items-center rounded-full bg-[#f0c25a] font-hindi text-xl sm:text-2xl text-[#4b160f] shadow-[0_0_0_4px_#fbf7ee,0_0_0_5px_#d3a846]">
-              ॐ
-            </span>
+            
+            {/* NEW LOGO IMAGE HERE */}
+            <img 
+              src="/baglamukhi-logo.png?v=2" 
+              alt="Shree Baglamukhi Nalkheda Logo" 
+              className="h-10 w-10 sm:h-12 sm:w-12 shrink-0 rounded-full object-cover shadow-[0_0_0_3px_#fbf7ee,0_0_0_4px_#d3a846]" 
+            />
+
             <span className="leading-tight flex flex-col justify-center">
               <strong className="block font-serif text-[1.1rem] sm:text-[1.3rem] font-bold text-[#641e17] leading-tight">
                 Shree Baglamukhi Nalkheda

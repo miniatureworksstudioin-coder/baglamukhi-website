@@ -1,61 +1,125 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { pujas } from '../pujas';
+import { whatsappLink } from '../contact';
+import { supabase } from '../supabaseClient';
 import { PHONE_DISPLAY, PHONE_TEL, PHONE2_DISPLAY, PHONE2_TEL } from '../contact';
 
-export default function Footer() {
-  return (
-    <footer className="bg-[#2b0c08] text-[#d8c7a6] py-14 px-5">
-      <div className="mx-auto max-w-7xl grid md:grid-cols-3 gap-12 border-b border-[#fff3d72e] pb-10">
-        <div>
-          <h2 className="text-2xl font-serif text-[#efc75d]">Shree Baglamukhi Nalkheda</h2>
-          <p className="mt-4 text-sm">Puja, havan and anushthan at the Maa Baglamukhi Mandir, Nalkheda, with Pandit Raghunandan Sharma.</p>
-        </div>
-        <div>
-          <h3 className="text-xl font-serif text-[#efc75d]">Quick links</h3>
-          <ul className="mt-4 space-y-2 text-sm">
-            <li><a href="#about" className="hover:text-[#f0c75c]">About Guruji</a></li>
-            <li><a href="#services" className="hover:text-[#f0c75c]">Puja Sequence</a></li>
-            <li><a href="#temple" className="hover:text-[#f0c75c]">Temple</a></li>
-            <li><a href="#faq" className="hover:text-[#f0c75c]">FAQ</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 className="text-xl font-serif text-[#efc75d]">Contact</h3>
-          <ul className="mt-4 space-y-2 text-sm">
-            <li><a href={`tel:${PHONE_TEL}`} className="hover:text-[#f0c75c]">{PHONE_DISPLAY}</a></li>
-            <li><a href={`tel:${PHONE2_TEL}`} className="hover:text-[#f0c75c]">{PHONE2_DISPLAY}</a></li>
-            <li><a href="mailto:shreebaglamukhinalkheda@gmail.com" className="hover:text-[#f0c75c]">shreebaglamukhinalkheda@gmail.com</a></li>
-            <li><a href="https://wa.me/919174137815" target="_blank" rel="noreferrer" className="hover:text-[#f0c75c]">WhatsApp</a></li>
-            <li>Nalkheda, Agar Malwa, M.P.</li>
-          </ul>
-        </div>
-      </div>
-      
-      <div className="mx-auto max-w-7xl mt-6 text-xs flex flex-col lg:flex-row justify-between items-center gap-4 text-[#b8a786]">
-        <p>© 2026 Shree Baglamukhi Nalkheda. All rights reserved.</p>
-        <p className="text-center lg:text-left flex-1">Beware of third-party apps or brokers using our name.</p>
-        
-        <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4">
-          <Link to="/terms" className="hover:text-[#f0c75c] transition-colors">
-            Terms of Service
-          </Link>
-          <span className="text-[#fff3d72e]">|</span>
-          <Link to="/privacy" className="hover:text-[#f0c75c] transition-colors">
-            Privacy Policy
-          </Link>
-        </div>
-      </div>
+const INITIAL_FORM = { name: '', phone: '', puja: pujas[0].name, date: '', message: '' };
+const fieldClass = 'mt-1.5 w-full rounded-md border border-[#d4c4a9] bg-[#fffdf8] px-4 py-3 text-[#37251d] text-[17px] outline-none transition focus:border-[#d6a632] focus:ring-1 focus:ring-[#d6a632]';
 
-      <div className="mx-auto max-w-7xl mt-6 text-center text-xs text-[#b8a786]">
-        Website designed by Aakash |{' '}
-        <a 
-          href="https://miniatureworksstudio.com" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="underline decoration-[#f0c75c]/30 underline-offset-4 hover:text-[#f0c75c] transition-colors"
-        >
-          miniatureworksstudio.com
-        </a>
+export default function BookingForm() {
+  const [form, setForm] = useState(INITIAL_FORM);
+  const [loading, setLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState('');
+  const [success, setSuccess] = useState(false);
+
+  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+  
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setErrorMsg('');
+    
+    const { error } = await supabase
+      .from('bookings')
+      .insert([{ name: form.name, phone: form.phone, puja_type: form.puja, preferred_date: form.date || null, message: form.message }]);
+
+    if (error) {
+      console.error(error);
+      setErrorMsg('There was an error saving your booking. Please try again or call us.');
+      setLoading(false);
+      return;
+    }
+
+    setSuccess(true);
+    const msg = `Jay mai ki guru ji,\nName: ${form.name}\nPhone: ${form.phone}\nPuja: ${form.puja}\nDate: ${form.date || 'Not decided'}\nMessage: ${form.message}`;
+    window.open(whatsappLink(msg), '_blank');
+    
+    setForm(INITIAL_FORM);
+    setLoading(false);
+  };
+
+  return (
+    <section id="contact" className="py-24 px-5 bg-[#f1e9dc]">
+      <div className="mx-auto max-w-7xl grid md:grid-cols-[0.9fr_1.1fr] gap-16 items-start">
+        
+        <div>
+          <span className="text-[#9e7426] uppercase tracking-[0.17em] text-xs font-bold">Start with a conversation</span>
+          <h2 className="mt-3 font-serif text-6xl md:text-[5.3rem] text-[#641e17] leading-[0.9] tracking-tight">
+            Book your puja
+          </h2>
+          <p className="mt-6 text-[#6c5b4f] text-[17px] max-w-[50ch]">
+            Send your details and Guruji will reply on WhatsApp with the date, samagri and dakshina.
+          </p>
+          
+          <div className="mt-8 space-y-6">
+            <div className="flex items-center gap-4">
+              <div className="bg-[#f3d790] text-[#6b2418] w-11 h-11 flex items-center justify-center rounded-full border border-[#c5962e] text-xl">📞</div>
+              <div>
+                <strong className="block text-sm text-[#641e17]">Phone & WhatsApp</strong>
+                <a href={`tel:${PHONE_TEL}`} className="text-[#6c5b4f] block">{PHONE_DISPLAY}</a>
+                <a href={`tel:${PHONE2_TEL}`} className="text-[#6c5b4f] block">{PHONE2_DISPLAY}</a>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <div className="bg-[#f3d790] text-[#6b2418] w-11 h-11 flex items-center justify-center rounded-full border border-[#c5962e] text-xl">✉️</div>
+              <div>
+                <strong className="block text-sm text-[#641e17]">Email</strong>
+                <a href="mailto:shreebaglamukhinalkheda@gmail.com" className="text-[#6c5b4f] break-words">shreebaglamukhinalkheda@gmail.com</a>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <div className="bg-[#f3d790] text-[#6b2418] w-11 h-11 flex items-center justify-center rounded-full border border-[#c5962e] text-xl">📍</div>
+              <div>
+                <strong className="block text-sm text-[#641e17]">Address</strong>
+                <span className="text-[#6c5b4f]">Baglamukhi Mandir, Nalkheda, Agar Malwa, Madhya Pradesh</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form onSubmit={handleSubmit} className="bg-[#fffaf2] border border-[#e2d5c0] rounded-xl p-8 md:p-10 shadow-[0_22px_54px_rgba(56,25,12,0.1)] grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <h3 className="col-span-full font-serif text-[2rem] text-[#641e17] leading-tight mb-2">Puja booking request</h3>
+          
+          <label className="block text-sm font-bold text-[#58352c]">Your name
+            <input name="name" required value={form.name} onChange={handleChange} className={fieldClass} />
+          </label>
+          <label className="block text-sm font-bold text-[#58352c]">Phone number
+            <input name="phone" type="tel" required value={form.phone} onChange={handleChange} className={fieldClass} />
+          </label>
+          <label className="block text-sm font-bold text-[#58352c]">Puja type
+            <select name="puja" value={form.puja} onChange={handleChange} className={fieldClass}>
+              {pujas.map(p => <option key={p.id} value={p.name}>{p.name}</option>)}
+            </select>
+          </label>
+          
+          <label className="block text-sm font-bold text-[#58352c]">Preferred date
+            <input 
+              name="date" 
+              type="text" 
+              placeholder="DD/MM/YYYY" 
+              pattern="\d{2}/\d{2}/\d{4}"
+              title="Please enter date in DD/MM/YYYY format"
+              value={form.date} 
+              onChange={handleChange} 
+              className={fieldClass} 
+            />
+          </label>
+          
+          <label className="col-span-full block text-sm font-bold text-[#58352c]">Message (optional)
+            <textarea name="message" rows="3" value={form.message} onChange={handleChange} className={fieldClass} />
+          </label>
+          
+          {errorMsg && <p className="col-span-full text-red-600 font-bold text-sm">{errorMsg}</p>}
+          {success && <p className="col-span-full text-green-700 font-bold text-sm">Booking saved! Opening WhatsApp...</p>}
+
+          <button type="submit" disabled={loading} className="col-span-full mt-2 rounded-full bg-[#167b4a] px-8 py-3.5 font-bold text-white transition hover:bg-[#11643e] flex justify-center items-center gap-2 disabled:opacity-50">
+            {loading ? 'Saving...' : 'Send on WhatsApp ↗'}
+          </button>
+        </form>
       </div>
-    </footer>
+    </section>
   );
 }

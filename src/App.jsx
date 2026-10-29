@@ -5,6 +5,7 @@ import NoticePopup from './components/NoticePopup';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import AdminPanel from './components/AdminPanel';
+import FloatingWhatsApp from './components/FloatingWhatsApp';
 
 import Home from './pages/Home';
 import Pujas from './pages/Pujas';

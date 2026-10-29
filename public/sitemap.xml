@@ -12,6 +12,14 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+  
+  <!-- NEW TEMPLE PAGE ADDED HERE -->
+  <url>
+    <loc>https://shreebaglamukhinalkheda.com/temple</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
   <url>
     <loc>https://shreebaglamukhinalkheda.com/contact</loc>
     <changefreq>monthly</changefreq>

@@ -4,8 +4,12 @@ export default function FAQ() {
     { q: "How much does a puja cost?", a: "The dakshina depends on the puja, the number of pandits and the samagri. Guruji will tell you the full amount on call or WhatsApp before you confirm." },
     { q: "How early should I book?", a: "We suggest 3 to 7 days for a havan and 2 weeks for a long anushthan. During Navratri, please book earlier." },
     { q: "What do I need to give for the sankalp?", a: "Your full name, your father's name, gotra (if known), city and the reason for the puja." },
-    { q: "Are results guaranteed?", a: "No. Puja is done with faith and in line with tradition. We do not promise any specific result, and it does not replace medical, legal or financial advice." }
+    { 
+      q: "Are results guaranteed?", 
+      a: "We perform all Pujas, Havans, and Anushthans with strict adherence to Vedic rituals and deep devotion at the Nalkheda Mandir. However, as per our scriptures, the outcome of any spiritual ritual depends on multiple factors, including the devotee's faith, past karma, and the divine will of Maa Baglamukhi. We do not promise any specific material result, nor does a Puja replace professional medical, legal, or financial advice." 
+    }
   ];
+
   return (
     <section id="faq" className="py-24 px-5 bg-[#fbf7ee]">
       <div className="mx-auto max-w-3xl">

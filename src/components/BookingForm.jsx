@@ -20,6 +20,8 @@ export default function BookingForm() {
     setLoading(true);
     setErrorMsg('');
     
+    // Note: For Supabase, if your date column is a DATE type, you might need to convert DD/MM/YYYY to YYYY-MM-DD here.
+    // If your Supabase column is just TEXT, this will work perfectly as is.
     const { error } = await supabase
       .from('bookings')
       .insert([{ name: form.name, phone: form.phone, puja_type: form.puja, preferred_date: form.date || null, message: form.message }]);
@@ -94,9 +96,21 @@ export default function BookingForm() {
               {pujas.map(p => <option key={p.id} value={p.name}>{p.name}</option>)}
             </select>
           </label>
+          
+          {/* UPDATED DATE FIELD */}
           <label className="block text-sm font-bold text-[#58352c]">Preferred date
-            <input name="date" type="date" value={form.date} onChange={handleChange} className={fieldClass} />
+            <input 
+              name="date" 
+              type="text" 
+              placeholder="DD/MM/YYYY" 
+              pattern="\d{2}/\d{2}/\d{4}"
+              title="Please enter date in DD/MM/YYYY format"
+              value={form.date} 
+              onChange={handleChange} 
+              className={fieldClass} 
+            />
           </label>
+          
           <label className="col-span-full block text-sm font-bold text-[#58352c]">Message (optional)
             <textarea name="message" rows="3" value={form.message} onChange={handleChange} className={fieldClass} />
           </label>

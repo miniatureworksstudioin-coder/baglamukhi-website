@@ -2,12 +2,13 @@ import { useParams, Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { pujas } from '../pujas';
 import { whatsappLink } from '../contact';
+import { useLanguage } from '../LanguageContext';
 
 export default function PujaDetail() {
   const { slug } = useParams();
   const puja = pujas.find((p) => p.slug === slug);
+  const { language, t } = useLanguage();
 
-  // This dynamically updates the Google Search Title for every puja!
   useEffect(() => {
     if (puja) {
       document.title = `${puja.name} in Nalkheda | Book Online at Shree Baglamukhi`;
@@ -18,10 +19,13 @@ export default function PujaDetail() {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-[#fbf7ee]">
         <h1 className="text-4xl font-serif text-[#641e17] mb-4">Puja Not Found</h1>
-        <Link to="/pujas" className="text-[#167b4a] font-bold underline">Go back to all Pujas</Link>
+        <Link to="/pujas" className="text-[#167b4a] font-bold underline">{t('puja_back')}</Link>
       </div>
     );
   }
+
+  // Helper to pick Hindi or English text
+  const getText = (field) => language === 'hi' ? puja[`${field}_hi`] || puja[field] : puja[field];
 
   return (
     <div className="min-h-screen bg-[#fbf7ee] py-20 px-5">
@@ -32,7 +36,7 @@ export default function PujaDetail() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end">
             <div className="p-8">
               <span className="bg-[#f0c25a] text-[#641e17] px-3 py-1 text-xs font-bold rounded-full mb-3 inline-block">
-                Step {String(puja.id).padStart(2, '0')}
+                {t('puja_step')} {String(puja.id).padStart(2, '0')}
               </span>
               <h1 className="text-4xl md:text-5xl font-serif text-white">{puja.hindi}</h1>
               <h2 className="text-2xl font-serif text-[#f0c25a] mt-1">{puja.name}</h2>
@@ -42,33 +46,33 @@ export default function PujaDetail() {
 
         <div className="p-8 md:p-12">
           <Link to="/pujas" className="text-sm font-bold text-[#9e7426] hover:underline mb-6 inline-block">
-            ← Back to all Pujas
+            {t('puja_back')}
           </Link>
 
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-serif text-[#641e17] mb-3 border-b border-[#e5d8c5] pb-2">About this Ritual</h3>
-              <p className="text-[#5d4c42] text-lg leading-relaxed">{puja.description}</p>
+              <h3 className="text-2xl font-serif text-[#641e17] mb-3 border-b border-[#e5d8c5] pb-2">{t('puja_about')}</h3>
+              <p className="text-[#5d4c42] text-lg leading-relaxed">{getText('description')}</p>
             </div>
 
             <div>
-              <h3 className="text-2xl font-serif text-[#641e17] mb-3 border-b border-[#e5d8c5] pb-2">Who is this Puja for?</h3>
-              <p className="text-[#5d4c42] text-lg leading-relaxed">{puja.whoIsItFor}</p>
+              <h3 className="text-2xl font-serif text-[#641e17] mb-3 border-b border-[#e5d8c5] pb-2">{t('puja_who_for')}</h3>
+              <p className="text-[#5d4c42] text-lg leading-relaxed">{getText('whoIsItFor')}</p>
             </div>
 
             <div>
-              <h3 className="text-2xl font-serif text-[#641e17] mb-3 border-b border-[#e5d8c5] pb-2">Key Benefits</h3>
-              <p className="text-[#5d4c42] text-lg leading-relaxed">{puja.benefits}</p>
+              <h3 className="text-2xl font-serif text-[#641e17] mb-3 border-b border-[#e5d8c5] pb-2">{t('puja_benefits')}</h3>
+              <p className="text-[#5d4c42] text-lg leading-relaxed">{getText('benefits')}</p>
             </div>
 
             <div>
-              <h3 className="text-2xl font-serif text-[#641e17] mb-3 border-b border-[#e5d8c5] pb-2">What is included?</h3>
-              <p className="text-[#5d4c42] text-lg leading-relaxed">{puja.includes}</p>
+              <h3 className="text-2xl font-serif text-[#641e17] mb-3 border-b border-[#e5d8c5] pb-2">{t('puja_includes')}</h3>
+              <p className="text-[#5d4c42] text-lg leading-relaxed">{getText('includes')}</p>
             </div>
 
             <div className="bg-[#f8ecd4] p-6 rounded-xl border border-[#e6d5b3] flex items-center justify-between flex-wrap gap-4">
               <div>
-                <p className="text-sm font-bold text-[#9e7426] uppercase tracking-wider">Approximate Duration</p>
+                <p className="text-sm font-bold text-[#9e7426] uppercase tracking-wider">{t('puja_duration')}</p>
                 <p className="text-xl font-serif text-[#641e17]">{puja.duration}</p>
               </div>
               <a 
@@ -77,7 +81,7 @@ export default function PujaDetail() {
                 rel="noreferrer"
                 className="bg-[#167b4a] text-white px-8 py-3 rounded-full font-bold hover:bg-[#11643e] transition shadow-lg text-lg"
               >
-                Book on WhatsApp
+                {t('puja_book_btn')}
               </a>
             </div>
           </div>

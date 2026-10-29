@@ -10,8 +10,8 @@ import FloatingWhatsApp from './components/FloatingWhatsApp';
 import Home from './pages/Home';
 import Pujas from './pages/Pujas';
 import Contact from './pages/Contact';
-import Terms from './pages/Terms';         {/* <-- ADDED */}
-import Privacy from './pages/Privacy';     {/* <-- ADDED */}
+import Terms from './pages/Terms';
+import Privacy from './pages/Privacy';
 
 export default function App() {
   const [isAdminOpen, setIsAdminOpen] = useState(false);
@@ -26,8 +26,8 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/pujas" element={<Pujas />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/terms" element={<Terms />} />      {/* <-- ADDED */}
-            <Route path="/privacy" element={<Privacy />} />  {/* <-- ADDED */}
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/privacy" element={<Privacy />} />
           </Routes>
         </main>
         <Footer onAdminClick={() => setIsAdminOpen(true)} />

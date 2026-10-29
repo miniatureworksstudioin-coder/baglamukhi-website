@@ -27,7 +27,6 @@ export const translations = {
 
     about_kicker: "At Nalkheda · Madhya Pradesh",
     about_title: "Pandit Raghunandan Sharma",
-    // UPDATED WITH 20 YEARS EXPERIENCE
     about_p1: "Pandit Raghunandan Sharma, with over 20 years of experience, performs Baglamukhi Pujan, Anushthan, Havan and Durga Saptashati Chandi Path at the Nalkheda temple. Each puja follows Vedic vidhi, with the sankalp taken in your name and gotra.",
     about_p2: "Before the puja he tells you the samagri needed, the muhurat and the number of pandits required, so that you know what to expect and what it costs.",
     about_lang: "Languages spoken",
@@ -40,7 +39,6 @@ export const translations = {
     puja_btn_wa: "Ask on WhatsApp",
     puja_step: "STEP",
 
-    // NEW TRANSLATIONS FOR ABOUT PUJA
     about_puja_kicker: "The Divine Grace of Maa Baglamukhi",
     about_puja_title: "Puja & Benefits",
     about_puja_desc: "Discover the spiritual significance and life-changing benefits of performing this sacred ritual at the Siddha Peeth of Nalkheda.",
@@ -74,11 +72,38 @@ export const translations = {
     temple_title: "Maa Baglamukhi Mandir, Nalkheda",
     temple_p1: "The temple stands on the bank of the Lakhundar river in Nalkheda, in the Agar Malwa district of Madhya Pradesh. It is counted among the three ancient Baglamukhi shrines of India, along with Datia and Kangra.",
     temple_p2: "The idol is believed to be swayambhu (self-manifested). Maa is seen in three forms, with Maa Lakshmi and Maa Saraswati beside her. Devotees say that Yudhishthira worshipped here on Shri Krishna's advice before the Mahabharata war.",
+    temple_p3: "Located on the banks of the Lakhundar River (a tributary of the Narmada), this ancient Siddha Peeth was historically restored in 1815. The unique feature of this temple is the central icon, which is a triad (three deities): Goddess Parvati in the center as Baglamukhi, with Goddess Lakshmi on her right and Goddess Saraswati on her left.",
     temple_time_1: "Temple opens",
     temple_time_2: "Morning aarti",
     temple_time_3: "Evening aarti",
     temple_time_4: "Temple closes",
+    temple_timing_note: "Timings can change on festival days. Please confirm with Guruji before travelling.",
     temple_caption: "Worship at Maa Baglamukhi Mandir, Nalkheda",
+
+    // Full Temple Page
+    temple_page_title: "Maa Baglamukhi Mandir, Nalkheda",
+    temple_page_subtitle: "A Sacred Shakti Peeth on the banks of the Lakhundar River in Agar Malwa, Madhya Pradesh.",
+    temple_timings_title: "Darshan & Aarti Timings",
+    temple_morning_aarti: "Morning Aarti (Mangala Aarti)",
+    temple_evening_aarti: "Evening Aarti (Sandhya Aarti)",
+    temple_darshan_hours: "Darshan Hours",
+    temple_havan_time: "Havan & Puja Time",
+    temple_havan_desc: "Performed throughout the day (except during Aarti)",
+    temple_navratri_note: "* During Navratri, special darshan timings apply.",
+    temple_history_title: "History & Significance",
+    temple_how_to_reach_title: "How to Reach Nalkheda",
+    temple_planning_puja: "Planning a Puja?",
+    temple_planning_desc: "Book a Havan or Anushthan at Nalkheda performed by Pandit Raghunandan Sharma.",
+    temple_explore_pujas: "Explore Puja Services",
+
+    // Puja Detail Page
+    puja_back: "← Back to all Pujas",
+    puja_about: "About this Ritual",
+    puja_who_for: "Who is this Puja for?",
+    puja_benefits: "Key Benefits",
+    puja_includes: "What is included?",
+    puja_duration: "Approximate Duration",
+    puja_book_btn: "Book on WhatsApp",
 
     gallery_kicker: "Moments of worship",
     gallery_title: "Photo Gallery",
@@ -154,7 +179,6 @@ export const translations = {
 
     about_kicker: "नलखेड़ा में · मध्य प्रदेश",
     about_title: "पंडित रघुनंदन शर्मा",
-    // UPDATED WITH 20 YEARS EXPERIENCE
     about_p1: "पंडित रघुनंदन शर्मा, 20 से अधिक वर्षों के अनुभव के साथ, नलखेड़ा मंदिर में बगलामुखी पूजन, अनुष्ठान, हवन और दुर्गा सप्तशती चंडी पाठ संपन्न करते हैं। प्रत्येक पूजा वैदिक विधि से होती है और संकल्प आपके नाम व गोत्र से लिया जाता है।",
     about_p2: "पूजा से पहले वे आवश्यक सामग्री, मुहूर्त और पंडितों की संख्या बताते हैं, ताकि आपको प्रक्रिया और दक्षिणा की जानकारी रहे।",
     about_lang: "बोली जाने वाली भाषाएँ",
@@ -167,7 +191,6 @@ export const translations = {
     puja_btn_wa: "व्हाट्सऐप पर पूछें",
     puja_step: "चरण",
 
-    // NEW TRANSLATIONS FOR ABOUT PUJA
     about_puja_kicker: "माँ बगलामुखी की दिव्य कृपा",
     about_puja_title: "पूजा और लाभ",
     about_puja_desc: "नलखेड़ा के सिद्ध पीठ में इस पवित्र अनुष्ठान को करने के आध्यात्मिक महत्व और जीवन बदलने वाले लाभों को जानें।",
@@ -201,11 +224,38 @@ export const translations = {
     temple_title: "माँ बगलामुखी मंदिर, नलखेड़ा",
     temple_p1: "मंदिर मध्य प्रदेश के आगर मालवा जिले में नलखेड़ा में लखुंदर नदी के तट पर स्थित है। इसे दतिया और कांगड़ा के साथ भारत के तीन प्राचीन बगलामुखी मंदिरों में गिना जाता है।",
     temple_p2: "मूर्ति को स्वयंभू माना जाता है। माँ तीन रूपों में दिखती हैं, उनके साथ माँ लक्ष्मी और माँ सरस्वती हैं। कहते हैं कि महाभारत युद्ध से पहले युधिष्ठिर ने श्री कृष्ण की सलाह पर यहां पूजा की थी।",
+    temple_p3: "लखुंदर नदी (नर्मदा की सहायक नदी) के तट पर स्थित, यह प्राचीन सिद्ध पीठ ऐतिहासिक रूप से 1815 में बहाल किया गया था। इस मंदिर की अनोखी विशेषता केंद्रीय मूर्ति है, जो एक त्रयी (तीन देवियां) है: केंद्र में बगलामुखी के रूप में देवी पार्वती, उनके दाईं ओर देवी लक्ष्मी और बाईं ओर देवी सरस्वती।",
     temple_time_1: "मंदिर खुलता है",
     temple_time_2: "सुबह की आरती",
     temple_time_3: "शाम की आरती",
     temple_time_4: "मंदिर बंद होता है",
+    temple_timing_note: "त्योहारों के दिनों में समय बदल सकता है। कृपया यात्रा करने से पहले गुरुजी से पुष्टि करें।",
     temple_caption: "माँ बगलामुखी मंदिर, नलखेड़ा में पूजा",
+
+    // Full Temple Page
+    temple_page_title: "मां बगलामुखी मंदिर, नलखेड़ा",
+    temple_page_subtitle: "आगर मालवा, मध्य प्रदेश में लखुंदर नदी के तट पर स्थित एक पवित्र शक्ति पीठ।",
+    temple_timings_title: "दर्शन एवं आरती का समय",
+    temple_morning_aarti: "सुबह की आरती (मंगला आरती)",
+    temple_evening_aarti: "शाम की आरती (संध्या आरती)",
+    temple_darshan_hours: "दर्शन का समय",
+    temple_havan_time: "हवन एवं पूजा का समय",
+    temple_havan_desc: "पूरे दिन किया जाता है (आरती के समय को छोड़कर)",
+    temple_navratri_note: "* नवरात्रि के दौरान, विशेष दर्शन समय लागू होते हैं।",
+    temple_history_title: "इतिहास और महत्व",
+    temple_how_to_reach_title: "नलखेड़ा कैसे पहुंचें",
+    temple_planning_puja: "पूजा की योजना बना रहे हैं?",
+    temple_planning_desc: "पंडित रघुनंदन शर्मा द्वारा नलखेड़ा में की जाने वाली हवन या अनुष्ठान बुक करें।",
+    temple_explore_pujas: "पूजा सेवाएं देखें",
+
+    // Puja Detail Page
+    puja_back: "← सभी पूजाओं पर वापस जाएं",
+    puja_about: "इस अनुष्ठान के बारे में",
+    puja_who_for: "यह पूजा किसके लिए है?",
+    puja_benefits: "मुख्य लाभ",
+    puja_includes: "इसमें क्या शामिल है?",
+    puja_duration: "अनुमानित समय",
+    puja_book_btn: "व्हाट्सएप पर बुक करें",
 
     gallery_kicker: "पूजा के क्षण",
     gallery_title: "फोटो गैलरी",

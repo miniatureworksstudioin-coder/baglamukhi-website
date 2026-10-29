@@ -1,5 +1,6 @@
 import Hero from '../components/Hero';
 import About from '../components/About';
+import PanchangWidget from '../components/PanchangWidget'; 
 import PujaList from '../components/PujaList';
 import AboutPuja from '../components/AboutPuja';
 import Process from '../components/Process';
@@ -15,6 +16,7 @@ export default function Home() {
     <div>
       <Hero />
       <About />
+      <PanchangWidget /> 
       <PujaList />
       <AboutPuja />
       <Process />

@@ -7,7 +7,8 @@ import FloatingWhatsApp from './components/FloatingWhatsApp';
 
 import Home from './pages/Home';
 import Pujas from './pages/Pujas';
-import PujaDetail from './pages/PujaDetail'; // <-- ADDED THIS IMPORT
+import PujaDetail from './pages/PujaDetail'; 
+import Temple from './pages/Temple'; // <-- ADDED TEMPLE IMPORT
 import Contact from './pages/Contact';
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
@@ -23,9 +24,10 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/pujas" element={<Pujas />} />
-            
-            {/* ADDED THIS DYNAMIC ROUTE */}
             <Route path="/pujas/:slug" element={<PujaDetail />} /> 
+            
+            {/* ADDED THIS NEW ROUTE */}
+            <Route path="/temple" element={<Temple />} /> 
             
             <Route path="/contact" element={<Contact />} />
             <Route path="/terms" element={<Terms />} />

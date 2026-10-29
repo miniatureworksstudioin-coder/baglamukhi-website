@@ -28,6 +28,10 @@ export default function App() {
         </main>
         <Footer onAdminClick={() => setIsAdminOpen(true)} />
         <AdminPanel isOpen={isAdminOpen} onClose={() => setIsAdminOpen(false)} />
+        
+        {/* ADDED THE FLOATING BUTTON HERE */}
+        <FloatingWhatsApp /> 
+        
       </div>
     </LanguageProvider>
   );

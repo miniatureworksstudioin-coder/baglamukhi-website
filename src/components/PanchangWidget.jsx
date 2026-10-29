@@ -17,16 +17,17 @@ export default function PanchangWidget() {
             </p>
           </div>
 
-          {/* The Interactive Widget Box */}
+          {/* The Interactive Widget Box - Resized to fit perfectly */}
           <div className="flex justify-center md:justify-end w-full">
-            <div className="rounded-xl overflow-hidden shadow-xl border-4 border-[#e6d5b3] bg-white w-full max-w-[350px]">
+            <div className="rounded-xl overflow-hidden shadow-xl border-4 border-[#e6d5b3] bg-white w-full max-w-[380px]">
               <iframe 
                 src="https://www.mypanchang.com/mypanchangwidget.php" 
                 title="Today's panchang" 
                 width="100%" 
-                height="320" 
-                style={{ border: 0, maxWidth: '100%' }}
+                height="210" 
+                style={{ border: 0, maxWidth: '100%', display: 'block' }}
                 loading="lazy"
+                scrolling="no"
               ></iframe>
             </div>
           </div>

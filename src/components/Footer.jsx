@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { PHONE_DISPLAY, PHONE_TEL, PHONE2_DISPLAY, PHONE2_TEL } from '../contact';
 
-export default function Footer({ onAdminClick }) {
+export default function Footer() {
   return (
     <footer className="bg-[#2b0c08] text-[#d8c7a6] py-14 px-5">
       <div className="mx-auto max-w-7xl grid md:grid-cols-3 gap-12 border-b border-[#fff3d72e] pb-10">
@@ -30,33 +30,21 @@ export default function Footer({ onAdminClick }) {
         </div>
       </div>
       
-      {/* Bottom Bar: Copyright, Warning, and Legal Links */}
       <div className="mx-auto max-w-7xl mt-6 text-xs flex flex-col lg:flex-row justify-between items-center gap-4 text-[#b8a786]">
         <p>© 2026 Shree Baglamukhi Nalkheda. All rights reserved.</p>
-        
         <p className="text-center lg:text-left flex-1">Beware of third-party apps or brokers using our name.</p>
         
         <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4">
-          {/* CHANGED TO <Link> FOR SMOOTH REACT ROUTING */}
           <Link to="/terms" className="hover:text-[#f0c75c] transition-colors">
             Terms of Service
           </Link>
-          
           <span className="text-[#fff3d72e]">|</span>
-          
           <Link to="/privacy" className="hover:text-[#f0c75c] transition-colors">
             Privacy Policy
           </Link>
-          
-          <span className="text-[#fff3d72e]">|</span>
-          
-          <button onClick={onAdminClick} className="hover:text-[#f0c75c] underline decoration-[#f0c75c]/30 underline-offset-4 transition-colors">
-            Admin Sign-in
-          </button>
         </div>
       </div>
 
-      {/* Designer Credit Section */}
       <div className="mx-auto max-w-7xl mt-6 text-center text-xs text-[#b8a786]">
         Website designed by Aakash |{' '}
         <a 
@@ -68,7 +56,6 @@ export default function Footer({ onAdminClick }) {
           miniatureworksstudio.com
         </a>
       </div>
-
     </footer>
   );
 }

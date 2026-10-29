@@ -12,18 +12,19 @@ export function LanguageProvider({ children }) {
     if (savedLang) setLanguage(savedLang);
   }, []);
 
-  const toggleLanguage = () => {
-    const newLang = language === 'en' ? 'hi' : 'en';
-    setLanguage(newLang);
-    localStorage.setItem('site_language', newLang);
+  // NEW: Function to handle all 4 languages
+  const changeLanguage = (lang) => {
+    setLanguage(lang);
+    localStorage.setItem('site_language', lang);
   };
 
+  // Translation function with a fallback to English if a key is missing
   const t = (key) => {
-    return translations[language][key] || key;
+    return translations[language]?.[key] || translations['en'][key] || key;
   };
 
   return (
-    <LanguageContext.Provider value={{ language, toggleLanguage, t }}>
+    <LanguageContext.Provider value={{ language, changeLanguage, t }}>
       {children}
     </LanguageContext.Provider>
   );

@@ -17,17 +17,27 @@ export default function PanchangWidget() {
             </p>
           </div>
 
-          {/* The Interactive Widget Box - Cropped perfectly */}
+          {/* The Interactive Widget Box with a Custom Footer */}
           <div className="flex justify-center md:justify-end w-full">
-            <div className="rounded-xl overflow-hidden shadow-xl border-4 border-[#e6d5b3] bg-white w-full max-w-[380px]">
+            <div className="rounded-xl overflow-hidden shadow-xl border-4 border-[#e6d5b3] bg-white w-full max-w-[380px] flex flex-col">
+              
+              {/* Iframe - Height reduced to cut off the internal white space */}
               <iframe 
                 src="https://www.mypanchang.com/mypanchangwidget.php" 
                 title="Today's panchang" 
-                className="block w-full border-0 m-0 p-0"
-                style={{ height: '155px', width: '100%', overflow: 'hidden' }}
+                className="block w-full border-0"
+                style={{ height: '145px', width: '100%', overflow: 'hidden' }}
                 loading="lazy"
                 scrolling="no"
               ></iframe>
+
+              {/* NEW: Our Custom Footer to fill the space beautifully */}
+              <div className="bg-[#fbf7ee] border-t border-[#e6d5b3] p-3 text-center">
+                <p className="text-xs text-[#77675b] font-medium tracking-wide">
+                  Timings calculated for Nalkheda, M.P.
+                </p>
+              </div>
+
             </div>
           </div>
 

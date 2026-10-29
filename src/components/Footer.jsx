@@ -29,15 +29,28 @@ export default function Footer({ onAdminClick }) {
         </div>
       </div>
       
-      <div className="mx-auto max-w-7xl mt-6 text-xs flex flex-col md:flex-row justify-between items-center gap-4 text-[#b8a786]">
+      {/* Bottom Bar: Copyright, Warning, and Legal Links */}
+      <div className="mx-auto max-w-7xl mt-6 text-xs flex flex-col lg:flex-row justify-between items-center gap-4 text-[#b8a786]">
         <p>© 2026 Shree Baglamukhi Nalkheda. All rights reserved.</p>
-        <p className="text-center md:text-left flex-1">Beware of third-party apps or brokers using our name.</p>
-        <button onClick={onAdminClick} className="hover:text-[#f0c75c] underline decoration-[#f0c75c]/30 underline-offset-4 transition-colors">
-          Admin Sign-in
-        </button>
+        
+        <p className="text-center lg:text-left flex-1">Beware of third-party apps or brokers using our name.</p>
+        
+        <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4">
+          <a href="/terms" className="hover:text-[#f0c75c] transition-colors">
+            Terms of Service
+          </a>
+          <span className="text-[#fff3d72e]">|</span>
+          <a href="/privacy" className="hover:text-[#f0c75c] transition-colors">
+            Privacy Policy
+          </a>
+          <span className="text-[#fff3d72e]">|</span>
+          <button onClick={onAdminClick} className="hover:text-[#f0c75c] underline decoration-[#f0c75c]/30 underline-offset-4 transition-colors">
+            Admin Sign-in
+          </button>
+        </div>
       </div>
 
-      {/* NEW: Designer Credit Section */}
+      {/* Designer Credit Section */}
       <div className="mx-auto max-w-7xl mt-6 text-center text-xs text-[#b8a786]">
         Website designed by Aakash |{' '}
         <a 

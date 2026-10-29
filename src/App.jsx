@@ -10,6 +10,8 @@ import FloatingWhatsApp from './components/FloatingWhatsApp';
 import Home from './pages/Home';
 import Pujas from './pages/Pujas';
 import Contact from './pages/Contact';
+import Terms from './pages/Terms';         {/* <-- ADDED */}
+import Privacy from './pages/Privacy';     {/* <-- ADDED */}
 
 export default function App() {
   const [isAdminOpen, setIsAdminOpen] = useState(false);
@@ -24,12 +26,14 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/pujas" element={<Pujas />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/terms" element={<Terms />} />      {/* <-- ADDED */}
+            <Route path="/privacy" element={<Privacy />} />  {/* <-- ADDED */}
           </Routes>
         </main>
         <Footer onAdminClick={() => setIsAdminOpen(true)} />
         <AdminPanel isOpen={isAdminOpen} onClose={() => setIsAdminOpen(false)} />
         
-        {/* ADDED THE FLOATING BUTTON HERE */}
+        {/* FLOATING BUTTON */}
         <FloatingWhatsApp /> 
         
       </div>
